@@ -1,0 +1,43 @@
+@import 'common/variables.scss';
+.van-cell:not(:last-child)::after {
+  right: 16px;
+  left: 16px;
+}
+.zv-cell {
+  .van-cell-label--hidden {
+    display: none;
+  }
+  .van-cell__right-icon {
+    align-self: center;
+  }
+  &__value {
+    margin-right: 4px;
+  }
+  &__wrapper {
+    height: 100%;
+    display: flex;
+    align-items: center;
+  }
+  &__title {
+    color: $base-font-color;
+    font-size: 14px;
+    margin-right: 4px;
+  }
+  &__label {
+    color: $sub-font-color;
+    font-size: 12px;
+  }
+  &__icon {
+    width: 36px;
+    height: 36px;
+    align-self: center;
+    margin-right: 8px;
+  }
+
+  &__icon-sm {
+    width: 24px;
+    height: 24px;
+    align-self: center;
+    margin-right: 8px;
+  }
+}

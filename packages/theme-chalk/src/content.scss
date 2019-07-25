@@ -1,0 +1,19 @@
+.zv-content {
+  &__wrapper {
+    color: #8b8b8b;
+    font-size: 12px;
+    height: 17px;
+    line-height: 1.5;
+    display: flex;
+    &-label {
+      flex: 1;
+      overflow: hidden;
+      text-overflow: ellipsis;
+
+      white-space: nowrap;
+    }
+  }
+  &__wrapper--bottom {
+    margin-bottom: 12px;
+  }
+}

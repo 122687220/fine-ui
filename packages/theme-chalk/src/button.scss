@@ -1,0 +1,56 @@
+.zv-button {
+  .van-button--plain {
+    background-color: #fff;
+    &:active {
+      &:before {
+        opacity: 0;
+      }
+      background-color: #fff;
+      opacity: 0.6;
+      .van-button__text {
+        opacity: 0.4;
+      }
+    }
+  }
+
+  .van-button--large {
+    width: 345px;
+  }
+  .van-button--small {
+    border-radius: 3px;
+  }
+  .van-button--normal {
+    width: 180px;
+  }
+
+  .van-button--disabled {
+    .van-button__text {
+      opacity: 0.4;
+    }
+  }
+
+  .zv-button--xl {
+    width: 100vw;
+    height: 44px !important;
+    line-height: 44px !important;
+    border-radius: 0 !important;
+  }
+
+  &--text {
+    width: 48px;
+    height: 16px;
+    font-size: 14px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    cursor: default;
+    &:active {
+      opacity: 0.6;
+    }
+    .zv-button__icon {
+      width: 13px;
+      height: 13px;
+      margin-left: 6px;
+    }
+  }
+}

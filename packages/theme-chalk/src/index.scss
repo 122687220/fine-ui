@@ -1,0 +1,25 @@
+@import 'button.scss';
+@import 'picker.scss';
+@import 'search.scss';
+@import 'multi-field.scss';
+@import 'list-group.scss';
+@import 'image-display.scss';
+@import 'tab-bar.scss';
+@import 'base-list.scss';
+@import 'cell.scss';
+@import 'cell-display.scss';
+@import 'tag.scss';
+@import 'radio-panel.scss';
+@import 'screen.scss';
+@import 'content.scss';
+@import 'radio.scss';
+@import 'radio-panel-group.scss';
+.van-dialog__footer {
+  .van-button--default {
+    background-color: white;
+  }
+}
+* {
+  -webkit-tap-highlight-color: rgba(0, 0, 0, 0);
+  -webkit-tap-highlight-color: transparent;
+}
