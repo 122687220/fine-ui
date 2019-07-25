@@ -45,24 +45,15 @@ function compileCss() {
     .pipe(dest('./lib'))
 }
 
-function copyFont() {
-  return src('./src/fonts/**').pipe(dest('./lib/fonts'))
-}
-
 function watchCss() {
   // return watch('./src/*.scss', parallel(compileCss, compileCssToPx))
   return watch('./src/*.scss', compileCss)
 }
 
-function watchFonts() {
-  return watch('./src/fonts/**', copyFont)
-}
-
 // exports.build = parallel(compileCss, compileCssToPx, copyFont)
-exports.build = parallel(cleanLib, compileCss, copyFont)
+exports.build = parallel(cleanLib, compileCss)
 exports.default = series(
   compileCss,
   // compileCssToPx,
-  copyFont,
-  parallel(watchCss, watchFonts)
+  parallel(watchCss)
 )

@@ -1,24 +1,15 @@
-// 基础色
-$baseColor: #70b913;
-$primaryColor: #1890ff;
-$warningColor: #faad14;
-$dangerColor: #e53935;
-$baseColorBg: rgba($color: #70b913, $alpha: 0.1);
-$primaryColorBg: rgba($color: #1890ff, $alpha: 0.1);
-$warningColorBg: rgba($color: #faad14, $alpha: 0.1);
-$dangerColorBg: rgba($color: #e53935, $alpha: 0.1);
-$disabledBg: rgba($color: #8b8b8b, $alpha: 0.1);
-
-// 导航栏相关
-$navBarBg: $baseColor; // 导航栏背景颜色
-$navBarTitle: #fff; // 导航栏文字颜色
+// themeBg
+$base-color: #7cb342;
+$mainBg: #f5f5f5;
+$hoverBg: #f5f7fa;
 
 // font
 $base-font-size: 14px;
 $sub-font-size: 12px;
 
-// 文本颜色
 $base-font-color: #212121;
 $sub-font-color: #8b8b8b;
-$minor-font-color: #c7c7c7;
 $border-color: #e0e0e0;
+$background-color: #eeeeee;
+$warning-color: #e53935;
+

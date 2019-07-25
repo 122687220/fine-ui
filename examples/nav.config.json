@@ -36,6 +36,18 @@
       "desc": "基础组件",
       "isMobile": "1",
       "items": [
+        {
+          "desc": "矢量图标",
+          "name": "svg",
+          "isMobile": "1",
+          "path": "/svg"
+        },
+        {
+          "desc": "按钮",
+          "name": "button",
+          "isMobile": "1",
+          "path": "/button"
+        }
       ]
     },
     {

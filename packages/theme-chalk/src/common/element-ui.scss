@@ -1,0 +1,27 @@
+/* 输入框统一样式 */
+.el-input__inner {
+  @include inputBorder();
+}
+
+/* 选择器样式 */
+.el-select {
+  font-size: $base-font-size;
+
+  .el-input.is-focus {
+    .el-input__inner {
+      @include inputBorder($color: $base-color);
+    }
+  }
+
+  .el-input__inner {
+    @include inputBorder();
+  }
+}
+
+.el-select-dropdown__item.selected {
+  color: $base-color;
+}
+
+.el-input--medium {
+  font-size: $base-font-size;
+}
