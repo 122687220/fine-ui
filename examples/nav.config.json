@@ -47,6 +47,36 @@
           "name": "button",
           "isMobile": "1",
           "path": "/button"
+        },
+        {
+          "desc": "提示",
+          "name": "alert",
+          "isMobile": "1",
+          "path": "/alert"
+        },
+        {
+          "desc": "分页器",
+          "name": "pagination",
+          "isMobile": "1",
+          "path": "/pagination"
+        },
+        {
+          "desc": "搜索",
+          "name": "search",
+          "isMobile": "1",
+          "path": "/search"
+        },
+        {
+          "desc": "标签页",
+          "name": "tabs",
+          "isMobile": "1",
+          "path": "/tabs"
+        },
+        {
+          "desc": "进度条",
+          "name": "progress",
+          "isMobile": "1",
+          "path": "/progress"
         }
       ]
     },
