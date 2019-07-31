@@ -2,25 +2,29 @@
 // This file is auto gererated by build/build-entry.js
 import Alert from './alert'
 import Button from './button'
+import Cascader from './cascader'
+import Check from './check'
 import Form from './form'
 import FormItem from './form-item'
+import Link from './link'
 import Pagination from './pagination'
 import Progress from './progress'
 import Search from './search'
 import Svg from './svg'
-import TabPane from './tab-pane'
 import Tabs from './tabs'
 const version = '0.0.1'
 const components = [
   Alert,
   Button,
+  Cascader,
+  Check,
   Form,
   FormItem,
+  Link,
   Pagination,
   Progress,
   Search,
   Svg,
-  TabPane,
   Tabs
 ]
 const install = Vue => {
@@ -37,13 +41,15 @@ export {
   version,
   Alert,
   Button,
+  Cascader,
+  Check,
   Form,
   FormItem,
+  Link,
   Pagination,
   Progress,
   Search,
   Svg,
-  TabPane,
   Tabs
 }
 export default {

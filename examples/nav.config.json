@@ -49,6 +49,12 @@
           "path": "/button"
         },
         {
+          "desc": "链接",
+          "name": "link",
+          "isMobile": "1",
+          "path": "/link"
+        },
+        {
           "desc": "提示",
           "name": "alert",
           "isMobile": "1",
@@ -65,6 +71,18 @@
           "name": "search",
           "isMobile": "1",
           "path": "/search"
+        },
+        {
+          "desc": "选择(非下拉)",
+          "name": "check",
+          "isMobile": "1",
+          "path": "/check"
+        },
+        {
+          "desc": "级联选择期",
+          "name": "cascader",
+          "isMobile": "1",
+          "path": "/cascader"
         },
         {
           "desc": "标签页",
