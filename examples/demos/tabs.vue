@@ -1,16 +1,12 @@
 <template>
-  <zv-tabs v-model="activeName">
-    <el-tab-pane label="用户登入" name="first">
-      <div style="width: 100%">
-        用户登入
-      </div>
-    </el-tab-pane>
+  <zv-tabs v-model="activeName" :tab-pane="tabPane">
+    <div style="width: 100%" slot="first">
+      用户登入
+    </div>
 
-    <el-tab-pane label="短信登录" name="second">
-      <div style="width: 100%">
-        短信登录
-      </div>
-    </el-tab-pane>
+    <div style="width: 100%" slot="second">
+      短信登录
+    </div>
   </zv-tabs>
 </template>
 
@@ -19,7 +15,17 @@ export default {
   name: 'TabsDemo',
   data() {
     return {
-      activeName: 'first'
+      activeName: 'first',
+      tabPane: [
+        {
+          label: '用户登入',
+          name: 'first'
+        },
+        {
+          label: '短信登录',
+          name: 'second'
+        }
+      ]
     }
   }
 }

@@ -1,0 +1,74 @@
+@import './common/variables.scss';
+@import './common/mixin.scss';
+
+.zv-select-label {
+  .zv-select--row {
+    @include containerH44();
+    @include flex();
+
+    .zv-select__title {
+      margin: 0;
+      padding-left: 16px;
+    }
+
+    .el-input__inner {
+      border-width: 0;
+      // width: 270px;
+      flex: 1;
+      text-align: right;
+    }
+
+    .el-select .el-input.is-focus .el-input__inner {
+      border-width: 0;
+    }
+
+    .zv-select-time {
+      border-width: 0;
+      // width: 300px;
+      line-height: 36px;
+    }
+
+    // 肖景   2019/4/2
+    .el-select--medium {
+      flex: 1;
+    }
+
+    .el-select>.el-input {
+      display: flex;
+    }
+
+    .zv-select-default {
+      flex: 1;
+      display: flex;
+      flex-direction: row-reverse;
+    }
+  }
+  .el-select {
+    width: 100%;
+    .el-input {
+      width: 100%;
+    }
+  }
+}
+.zv-select-label.default {
+  width: 200px;
+  padding-right: 40px;
+}
+
+.zv-select-label.big {
+  width: 444px;
+  padding-right: 40px;
+}
+
+.zv-select-label.super {
+  width: 100%;
+  padding-right: 40px;
+}
+
+.zv-select-end {
+  justify-content: flex-end;
+}
+
+.zv-select .zv-select-default .el-input--medium .el-input__icon {
+  line-height: 32px;
+}

@@ -73,10 +73,34 @@
           "path": "/search"
         },
         {
+          "desc": "输入框",
+          "name": "input",
+          "isMobile": "1",
+          "path": "/input"
+        },
+        {
+          "desc": "选择(下拉框)",
+          "name": "select",
+          "isMobile": "1",
+          "path": "/select"
+        },
+        {
           "desc": "选择(非下拉)",
           "name": "check",
           "isMobile": "1",
           "path": "/check"
+        },
+        {
+          "desc": "选择时间",
+          "name": "selecttime",
+          "isMobile": "1",
+          "path": "/selecttime"
+        },
+        {
+          "desc": "选择(集合)",
+          "name": "selectlabel",
+          "isMobile": "1",
+          "path": "/selectlabel"
         },
         {
           "desc": "级联选择期",
@@ -91,6 +115,24 @@
           "path": "/tabs"
         },
         {
+          "desc": "下拉菜单",
+          "name": "dropdown",
+          "isMobile": "1",
+          "path": "/dropdown"
+        },
+        {
+          "desc": "弹窗",
+          "name": "dialog",
+          "isMobile": "1",
+          "path": "/dialog"
+        },
+        {
+          "desc": "中型弹窗",
+          "name": "dialogmiddle",
+          "isMobile": "1",
+          "path": "/dialogmiddle"
+        },
+        {
           "desc": "进度条",
           "name": "progress",
           "isMobile": "1",
@@ -102,6 +144,12 @@
       "desc": "表单组件",
       "isMobile": "1",
       "items": [
+        {
+          "desc": "表单",
+          "name": "form",
+          "isMobile": "1",
+          "path": "/form"
+        }
       ]
     },
     {
@@ -114,6 +162,18 @@
       "desc": "展示组件",
       "isMobile": "1",
       "items": [
+        {
+          "desc": "一级标题",
+          "name": "title",
+          "isMobile": "1",
+          "path": "/title"
+        },
+        {
+          "desc": "二级标题",
+          "name": "subtitle",
+          "isMobile": "1",
+          "path": "/subtitle"
+        }
       ]
     },
     {

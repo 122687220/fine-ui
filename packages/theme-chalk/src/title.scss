@@ -1,0 +1,25 @@
+@import './common/variables.scss';
+@import './common/mixin.scss';
+
+.zv-title {
+  @include containerH44();
+  @include flex();
+
+  &__left {
+    @include flex($justifyContent: flex-start);
+    flex: 1;
+    font-size: $super-font-size;
+    color: $base-font-color;
+
+    &-sub {
+      font-size: $sub-font-size;
+      color: $sub-font-color;
+      margin-left: 4px;
+    }
+  }
+
+  &__right {
+    flex: 1;
+    @include flex($justifyContent: flex-end);
+  }
+}

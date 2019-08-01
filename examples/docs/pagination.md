@@ -1,4 +1,4 @@
-# Button 组件
+# Pagination 组件
 
 <!-- {.md} -->
 
