@@ -64,7 +64,7 @@ Vue.use(ElementUI, {
 <!-- {.md} -->
 
 ```js
-import ZvUI from 'zv-ui_pc' // 引入组件库
+import ZvUI from 'zv-ui__pc' // 引入组件库
 ```
 
 <!-- {.md} -->
@@ -72,7 +72,7 @@ import ZvUI from 'zv-ui_pc' // 引入组件库
 引入<!-- {.md} -->样式
 
 ```js
-import 'zv-ui/lib/theme-chalk/index.css' 
+import 'zv-ui__pc/lib/theme-chalk/index.css' 
 ```
 
 最后，全局使用组件库<!-- {.md} -->

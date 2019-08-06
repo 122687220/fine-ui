@@ -1,6 +1,6 @@
 {
   "name": "zv-ui__pc",
-  "version": "0.0.6",
+  "version": "0.0.8",
   "description": "中科云谷产品部电脑端端组件库",
   "main": "lib/zv-ui__pc.common.js",
   "style": "lib/theme-chalk/index.css",
@@ -141,10 +141,10 @@
     }
   },
   "license": "MIT",
-  "author": "liuyulin",
+  "author": "zoomlion",
   "repository": {
     "type": "git",
-    "url": "https://git.dev.tencent.com/liuyulin/zv-ui.git"
+    "url": "https://git.dev.tencent.com/xiaojing123/ZvUI-pc.git"
   },
   "keywords": [
     "vue",
