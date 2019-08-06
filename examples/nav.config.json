@@ -67,6 +67,12 @@
           "path": "/pagination"
         },
         {
+          "desc": "表格",
+          "name": "table",
+          "isMobile": "1",
+          "path": "/table"
+        },
+        {
           "desc": "搜索",
           "name": "search",
           "isMobile": "1",
@@ -131,6 +137,24 @@
           "name": "dialogmiddle",
           "isMobile": "1",
           "path": "/dialogmiddle"
+        },
+        {
+          "desc": "全面屏弹窗",
+          "name": "dialogfullscreen",
+          "isMobile": "1",
+          "path": "/dialogfullscreen"
+        },
+        {
+          "desc": "上传",
+          "name": "upload",
+          "isMobile": "1",
+          "path": "/upload"
+        },
+        {
+          "desc": "自定义滚动组件",
+          "name": "scroll",
+          "isMobile": "1",
+          "path": "/scroll"
         },
         {
           "desc": "进度条",

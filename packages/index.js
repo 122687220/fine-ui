@@ -5,6 +5,7 @@ import Button from './button'
 import Cascader from './cascader'
 import Check from './check'
 import Dialog from './dialog'
+import DialogFullscreen from './dialog-fullscreen'
 import DialogMiddle from './dialog-middle'
 import Dropdown from './dropdown'
 import Form from './form'
@@ -13,21 +14,25 @@ import Input from './input'
 import Link from './link'
 import Pagination from './pagination'
 import Progress from './progress'
+import Scroll from './scroll'
 import Search from './search'
 import Select from './select'
 import SelectLabel from './select-label'
 import SelectTime from './select-time'
 import SubTitle from './sub-title'
 import Svg from './svg'
+import Table from './table'
 import Tabs from './tabs'
 import Title from './title'
-const version = '0.0.3'
+import Upload from './upload'
+const version = '0.0.5'
 const components = [
   Alert,
   Button,
   Cascader,
   Check,
   Dialog,
+  DialogFullscreen,
   DialogMiddle,
   Dropdown,
   Form,
@@ -36,14 +41,17 @@ const components = [
   Link,
   Pagination,
   Progress,
+  Scroll,
   Search,
   Select,
   SelectLabel,
   SelectTime,
   SubTitle,
   Svg,
+  Table,
   Tabs,
-  Title
+  Title,
+  Upload
 ]
 const install = Vue => {
   components.forEach(Component => {
@@ -62,6 +70,7 @@ export {
   Cascader,
   Check,
   Dialog,
+  DialogFullscreen,
   DialogMiddle,
   Dropdown,
   Form,
@@ -70,14 +79,17 @@ export {
   Link,
   Pagination,
   Progress,
+  Scroll,
   Search,
   Select,
   SelectLabel,
   SelectTime,
   SubTitle,
   Svg,
+  Table,
   Tabs,
-  Title
+  Title,
+  Upload
 }
 export default {
   install,
