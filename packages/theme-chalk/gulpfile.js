@@ -1,5 +1,5 @@
 'use strict'
-const { watch, series, src, dest, parallel } = require('gulp')
+const { watch, series, src, dest, parallel, task } = require('gulp')
 const postcss = require('gulp-postcss')
 const sass = require('gulp-sass')
 const cssmin = require('gulp-cssmin')
@@ -50,10 +50,13 @@ function watchCss() {
   return watch('./src/*.scss', compileCss)
 }
 
-// exports.build = parallel(compileCss, compileCssToPx, copyFont)
-exports.build = parallel(cleanLib, compileCss)
-exports.default = series(
-  compileCss,
-  // compileCssToPx,
-  parallel(watchCss)
+task('build', parallel(cleanLib, compileCss))
+
+task(
+  'default',
+  series(
+    compileCss,
+    // compileCssToPx,
+    parallel(watchCss)
+  )
 )
