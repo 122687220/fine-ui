@@ -1,0 +1,80 @@
+@import './common/variables.scss';
+@import './common/mixin.scss';
+
+.zv-table {
+  position: relative;
+
+  .zv-table_container {
+    width: 100%;
+  }
+
+  th {
+    padding: 0;
+    height: 44px;
+  }
+
+  .has-gutter {
+    th {
+      background-color: $mainBg;
+    }
+  }
+
+  .hasOperation {
+    color: #4272d7;
+    text-decoration: underline;
+    cursor: pointer;
+  }
+
+  .el-checkbox__input.is-checked,
+  .el-checkbox__input.is-checked .el-checkbox__inner,
+  .el-checkbox__input.is-indeterminate .el-checkbox__inner {
+    background-color: $base-color;
+    border-color: $base-color;
+    height: 14px;
+  }
+
+  .el-checkbox__inner:hover {
+    border-color: $base-color;
+  }
+
+  .rowDisabled {
+    color: #c7c7c7;
+  }
+
+  .el-table--medium td {
+    padding: 6px 0;
+    height: 44px;
+  }
+
+  div.cell {
+    max-width: 400px;
+  }
+
+  .zv-table_button-box {
+    display: flex;
+    flex-direction: row-reverse;
+  }
+
+  //表格宽度自适应
+  .el-table__body {
+    table-layout: auto !important;
+  }
+
+  .zv-table_cell-content {
+    overflow: hidden;
+    text-overflow: ellipsis;
+    white-space: nowrap;
+  }
+
+  .zv-table_button {
+    margin-left: 8px;
+  }
+}
+
+.zv-table_header-class th {
+  background-color: $mainBg !important;
+}
+
+.zv-table_header-class th.is-sortable {
+  padding: 0;
+}
