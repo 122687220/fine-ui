@@ -31,6 +31,7 @@
       width="600px"
       :btn-list="[]"
       title=""
+      append-to-body
     >
       <img width="100%" :src="dialogImageUrl" alt="" />
     </zv-dialog>
@@ -42,6 +43,7 @@
       width="600px"
       :btn-list="[]"
       :title="exampleDescription"
+      append-to-body
     >
       <img width="100%" :src="exampleImgSrc" alt="示例图片" />
     </zv-dialog>
