@@ -6,7 +6,6 @@
     :close-on-click-modal="false"
     :width="width"
     @closed="closed"
-    :modal-append-to-body="false"
     v-bind="$attrs"
     v-on="$listeners"
   >
