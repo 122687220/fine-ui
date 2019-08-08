@@ -16,6 +16,7 @@
         :options="options"
         placeholder="请选择"
         component-name="Select"
+        is-required
         title="机型"
       />
     </example-wrapper>

@@ -9,6 +9,7 @@
     .zv-select__title {
       margin: 0;
       padding-left: 16px;
+      color: $base-font-color;
     }
 
     .el-input__inner {
@@ -48,6 +49,11 @@
     .el-input {
       width: 100%;
     }
+  }
+  .zv-select--require:before {
+    content: '*';
+    color: $warning-color;
+    margin-right: 2px;
   }
 }
 .zv-select-label.default {

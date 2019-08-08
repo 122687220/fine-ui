@@ -36,7 +36,7 @@
     </zv-dialog>
 
     <zv-dialog
-      v-if="haveExample"
+      v-if="haveExample && exampleVisible"
       v-model="exampleVisible"
       bodyHeight="600px"
       width="600px"
