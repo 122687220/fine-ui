@@ -1,11 +1,13 @@
 <template>
-  <el-form-item
-    v-bind="$attrs"
-    v-on="$listeners"
-    :class="[inline ? 'zv-form-item__inline' : 'zv-form-item__normal']"
-  >
-    <slot />
-  </el-form-item>
+  <div class="zv-form-item">
+    <el-form-item
+      v-bind="$attrs"
+      v-on="$listeners"
+      :class="[inline ? 'zv-form-item__inline' : 'zv-form-item__normal']"
+    >
+      <slot />
+    </el-form-item>
+  </div>
 </template>
 
 <script>

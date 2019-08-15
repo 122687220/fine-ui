@@ -1,36 +1,39 @@
 @import './common/variables.scss';
 @import './common/mixin.scss';
 
-.el-upload--picture-card {
-  width: 100px;
-  height: 100px;
-  line-height: 100px;
-  border-radius: 4px;
-  border: solid 1px #e0e0e0;
-}
-
-.el-upload-list--picture-card {
-  .el-upload-list__item {
-    border: 0;
-    height: 100px;
+.zv-upload {
+  .el-upload--picture-card {
     width: 100px;
-    margin-right: 24px;
-  }
-
-  .el-upload-list__item-actions {
     height: 100px;
-  }
-  
-  /deep/ .el-progress {
-    width: 100% !important;
-    height: 100% !important;
+    line-height: 100px;
+    border-radius: 4px;
+    border: solid 1px #e0e0e0;
   }
 
-  /deep/ .el-progress-circle {
-    width: 100% !important;
-    height: 100% !important;
-  }
+  .el-upload-list--picture-card {
+    .el-upload-list__item {
+      border: 0;
+      height: 100px;
+      width: 100px;
+      margin-right: 24px;
+    }
+
+    .el-upload-list__item-actions {
+      height: 100px;
+    }
+    
+    /deep/ .el-progress {
+      width: 100% !important;
+      height: 100% !important;
+    }
+
+    /deep/ .el-progress-circle {
+      width: 100% !important;
+      height: 100% !important;
+    }
+  }  
 }
+
 
 .zv-upload {
   &-title {

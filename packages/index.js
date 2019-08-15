@@ -25,7 +25,7 @@ import Table from './table'
 import Tabs from './tabs'
 import Title from './title'
 import Upload from './upload'
-const version = '0.0.11'
+const version = '0.0.12'
 const components = [
   Alert,
   Button,
