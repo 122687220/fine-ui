@@ -20,6 +20,16 @@
   .el-upload-list__item-actions {
     height: 100px;
   }
+  
+  /deep/ .el-progress {
+    width: 100% !important;
+    height: 100% !important;
+  }
+
+  /deep/ .el-progress-circle {
+    width: 100% !important;
+    height: 100% !important;
+  }
 }
 
 .zv-upload {
