@@ -4,6 +4,9 @@
       <zv-button @click="dialogVisible1 = true">
         打开dialog
       </zv-button>
+      <zv-button @click="locale = 'en_US'">
+        切换语言
+      </zv-button>
     </example-wrapper>
     <example-wrapper>
       <zv-button @click="dialogVisible2 = true">
@@ -34,6 +37,7 @@
 
 <script>
 import ExampleWrapper from './ExampleWrapper'
+
 export default {
   name: 'DialogDemo',
   components: { ExampleWrapper },
@@ -41,7 +45,8 @@ export default {
     return {
       dialogVisible1: false,
       dialogVisible2: false,
-      name: ''
+      name: '',
+      locale: 'zh_CN'
     }
   }
 }

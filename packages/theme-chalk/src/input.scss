@@ -139,16 +139,19 @@
   }
 }
 .zv-input.default {
+  box-sizing: border-box;
   width: 200px;
   padding-right: 40px;
 }
 
 .zv-input.big {
+  box-sizing: border-box;
   width: 444px;
   padding-right: 40px;
 }
 
 .zv-input.super {
+  box-sizing: border-box;
   width: 100%;
   padding-right: 40px;
 }

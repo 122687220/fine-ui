@@ -1,7 +1,7 @@
 <template>
   <el-dialog
     custom-class="zv-dialog"
-    :title="title"
+    :title="title || localeLang.title || '取消'"
     :visible.sync="currentValue"
     :close-on-click-modal="false"
     :width="width"
@@ -28,7 +28,7 @@
         v-if="btnList.includes('cancel')"
         fun-id="dialog-cancel"
       >
-        取消
+        {{ localeLang.cancel || '取消' }}
       </zv-button>
       <zv-button
         type="primary"
@@ -36,7 +36,7 @@
         v-if="btnList.includes('submit')"
         fun-id="dialog-submit"
       >
-        确定
+        {{ localeLang.sure || '确定' }}
       </zv-button>
       <slot name="right" />
     </div>
@@ -46,9 +46,12 @@
 <script>
 import create from '../utils/create-basic'
 import ZvModel from '../mixins/zv-model'
+import langMixins from '../mixins/langMixins'
+import lang from './lang/index'
+
 export default create({
   name: 'Dialog',
-  mixins: [ZvModel],
+  mixins: [ZvModel, langMixins],
   props: {
     width: {
       type: String,
@@ -59,8 +62,7 @@ export default create({
       default: '300px'
     },
     title: {
-      type: String,
-      default: '提示'
+      type: String
     },
     btnList: {
       type: Array,
@@ -74,6 +76,9 @@ export default create({
       return {
         height: this.bodyHeight
       }
+    },
+    localeLang() {
+      return lang[this.localLocale] || {}
     }
   },
   methods: {

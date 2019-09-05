@@ -1,7 +1,7 @@
 export default {
   props: {
     value: {
-      type: [String, Number, Boolean, Array, Date],
+      type: [String, Number, Boolean, Array, Date, Object],
       default: ''
     }
   },

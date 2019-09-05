@@ -3,11 +3,11 @@
     :class="[
       'zv-input',
       className,
-      $attrs.readonly === '' ? 'zv-input--readonly' : '',
-      $attrs.textRight === '' ? 'zv-input--right' : '',
-      $attrs.labelTop === '' ? 'zv-input--label-top' : '',
-      $attrs.showBorder === '' ? 'zv-input--border' : '',
-      $attrs.required === '' ? 'zv-input--require' : '',
+      $attrs.readonly === '' || $attrs.readonly ? 'zv-input--readonly' : '',
+      $attrs.textRight === '' || $attrs.textRight ? 'zv-input--right' : '',
+      $attrs.labelTop === '' || $attrs.labelTop ? 'zv-input--label-top' : '',
+      $attrs.showBorder === '' || $attrs.showBorder ? 'zv-input--border' : '',
+      $attrs.required === '' || $attrs.required ? 'zv-input--require' : '',
       $attrs.type === 'textarea' ? 'zv-input--textarea' : ''
     ]"
   >
@@ -57,17 +57,19 @@ export default create({
   },
   computed: {
     className() {
-      if (this.$attrs.labelTop === '' && this.$attrs.showBorder === '') {
+      if (
+        (this.$attrs.labelTop === '' && this.$attrs.showBorder === '') ||
+        (this.$attrs.labelTop && this.$attrs.showBorder)
+      ) {
         return this.widthType
       }
       return ''
     }
   },
-  created() {
-    console.log(this.$attrs)
-  },
-  handleClick() {
-    this.$emit('clickIcon', this.currentValue)
+  methods: {
+    handleClick() {
+      this.$emit('clickIcon', this.currentValue)
+    }
   }
 })
 </script>

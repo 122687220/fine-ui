@@ -57,18 +57,31 @@
   }
 }
 .zv-select-label.default {
+  box-sizing: border-box;
   width: 200px;
   padding-right: 40px;
 }
 
 .zv-select-label.big {
+  box-sizing: border-box;
   width: 444px;
   padding-right: 40px;
 }
 
 .zv-select-label.super {
+  box-sizing: border-box;
   width: 100%;
   padding-right: 40px;
+}
+
+.zv-select-label[timeType='monthrange'],
+.zv-select-label[timeType='daterange'] {
+  box-sizing: border-box;
+  width: 444px;
+  padding-right: 40px;
+  .zv-select-time--daterange {
+    box-sizing: border-box;
+  }
 }
 
 .zv-select-end {

@@ -1,13 +1,7 @@
 <template>
   <div>
     <example-wrapper>
-      <zv-select
-        v-model="value"
-        :options="options"
-        placeholder="请选择"
-        title="机型"
-        row
-      />
+      <zv-select v-model="value" :options="options" placeholder="请选择" row />
     </example-wrapper>
 
     <example-wrapper>

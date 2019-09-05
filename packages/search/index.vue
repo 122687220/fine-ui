@@ -1,7 +1,7 @@
 <template>
   <div :class="['zv-search', showBtn ? 'zv-search--show' : '']">
     <el-input
-      :placeholder="placeholder"
+      :placeholder="placeholder || localeLang.placeHolder"
       v-model="currentValue"
       @blur="onBlur"
       @keyup.enter.native="onKeyupEnter"
@@ -9,7 +9,7 @@
       <i slot="prefix" class="el-input__icon el-icon-search"></i>
     </el-input>
     <div v-if="showBtn" class="zv-search__text" @click="onSearch">
-      搜索
+      {{ localeLang.search || '搜索' }}
     </div>
   </div>
 </template>
@@ -17,19 +17,24 @@
 <script>
 import create from '../utils/create-basic'
 import ZvModel from '../mixins/zv-model'
+import langMixins from '../mixins/langMixins'
+import lang from './lang/index'
+
 export default create({
   name: 'Search',
-  mixins: [ZvModel],
+  mixins: [ZvModel, langMixins],
   props: {
     showBtn: {
       type: Boolean,
       default: false
     },
     placeholder: {
-      type: String,
-      default() {
-        return '请输入搜索内容'
-      }
+      type: String
+    }
+  },
+  computed: {
+    localeLang() {
+      return lang[this.localLocale] || {}
     }
   },
   methods: {

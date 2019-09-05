@@ -1,8 +1,10 @@
 <template>
   <div class="zv-title">
     <div class="zv-title__left">
-      <div>{{ title }}</div>
-      <div class="zv-title__left-sub">{{ subTitle }}</div>
+      <div>{{ title || localeLang.title || '标题' }}</div>
+      <div class="zv-title__left-sub">
+        {{ subTitle || localeLang.subTitle || '副标题' }}
+      </div>
     </div>
     <div class="zv-title__right">
       <slot />
@@ -12,16 +14,23 @@
 
 <script>
 import create from '../utils/create-basic'
+import langMixins from '../mixins/langMixins'
+import lang from './lang/index'
+
 export default create({
   name: 'Title',
+  mixins: [langMixins],
   props: {
     title: {
-      type: String,
-      default: '标题'
+      type: String
     },
     subTitle: {
-      type: String,
-      default: '副标题'
+      type: String
+    }
+  },
+  computed: {
+    localeLang() {
+      return lang[this.localLocale] || {}
     }
   }
 })

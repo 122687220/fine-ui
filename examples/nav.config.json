@@ -173,6 +173,12 @@
           "name": "form",
           "isMobile": "1",
           "path": "/form"
+        },
+        {
+          "desc": "动态行内表单",
+          "name": "dymanicform",
+          "isMobile": "1",
+          "path": "/dymanicform"
         }
       ]
     },
@@ -202,14 +208,6 @@
     },
     {
       "desc": "导航组件",
-      "isMobile": "1",
-      "items": [
-      ]
-    }
-  ],
-  "组件使用模板": [
-    {
-      "desc": "选择列表",
       "isMobile": "1",
       "items": [
       ]

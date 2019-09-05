@@ -1,10 +1,10 @@
 <template>
   <div class="zv-upload">
     <div class="zv-upload-title">
-      {{ title }}
-      <span>{{ subTitle }}</span>
+      {{ title || localeLang.title || '上传附件' }}
+      <span>{{ subTitle || localeLang.subTitle || '格式要求' }}</span>
       <i v-if="haveExample" class="green" @click="exampleVisible = true">
-        示例
+        {{ localeLang.example || '示例' }}
         <zv-svg-icon icon-class="eye" />
       </i>
     </div>
@@ -42,10 +42,18 @@
       bodyHeight="600px"
       width="600px"
       :btn-list="[]"
-      :title="exampleDescription"
+      :title="
+        exampleDescription || localeLang.exampleDescription || '示例描述的部分'
+      "
       append-to-body
     >
-      <img width="100%" :src="exampleImgSrc" alt="示例图片" />
+      <img
+        width="100%"
+        :src="exampleImgSrc"
+        :alt="
+          localeLang.exampleImage || localeLang.exampleDescription || '示例图片'
+        "
+      />
     </zv-dialog>
   </div>
 </template>
@@ -54,9 +62,13 @@
 import create from '../utils/create-basic'
 import ZvDialog from '../dialog/index'
 import ZvSvgIcon from '../svg/index'
+import langMixins from '../mixins/langMixins'
+import lang from './lang/index'
+
 export default create({
   name: 'Upload',
   components: { ZvDialog, ZvSvgIcon },
+  mixins: [langMixins],
   props: {
     type: {
       type: String,
@@ -66,12 +78,10 @@ export default create({
       }
     },
     title: {
-      type: String,
-      default: '上传附件'
+      type: String
     },
     subTitle: {
-      type: String,
-      default: '格式要求'
+      type: String
     },
     // 是否需要示例
     haveExample: {
@@ -79,12 +89,10 @@ export default create({
       default: false
     },
     exampleDescription: {
-      type: String,
-      default: '示例描述的部分'
+      type: String
     },
     exampleImgSrc: {
-      type: String,
-      default: '示例描述的部分'
+      type: String
     }
   },
   data() {
@@ -92,6 +100,11 @@ export default create({
       dialogImageUrl: '',
       dialogVisible: false,
       exampleVisible: false
+    }
+  },
+  computed: {
+    localeLang() {
+      return lang[this.localLocale] || {}
     }
   },
   methods: {

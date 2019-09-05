@@ -8,10 +8,12 @@ import Dialog from './dialog'
 import DialogFullscreen from './dialog-fullscreen'
 import DialogMiddle from './dialog-middle'
 import Dropdown from './dropdown'
+import DymanicForm from './dymanic-form'
 import Form from './form'
 import FormItem from './form-item'
 import Input from './input'
 import Link from './link'
+import LocaleProvider from './locale-provider'
 import Pagination from './pagination'
 import Progress from './progress'
 import Scroll from './scroll'
@@ -35,10 +37,12 @@ const components = [
   DialogFullscreen,
   DialogMiddle,
   Dropdown,
+  DymanicForm,
   Form,
   FormItem,
   Input,
   Link,
+  LocaleProvider,
   Pagination,
   Progress,
   Scroll,
@@ -73,10 +77,12 @@ export {
   DialogFullscreen,
   DialogMiddle,
   Dropdown,
+  DymanicForm,
   Form,
   FormItem,
   Input,
   Link,
+  LocaleProvider,
   Pagination,
   Progress,
   Scroll,

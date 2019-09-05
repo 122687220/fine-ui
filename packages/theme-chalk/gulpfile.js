@@ -26,6 +26,10 @@ function cleanLib() {
   }).pipe(clean())
 }
 
+function copySrc() {
+  return src('./src/**/*.scss').pipe(dest('./lib/src'))
+}
+
 function compileCss() {
   return src('./src/*.scss')
     .pipe(sass.sync())
@@ -50,7 +54,7 @@ function watchCss() {
   return watch('./src/*.scss', compileCss)
 }
 
-task('build', parallel(cleanLib, compileCss))
+task('build', parallel(cleanLib, copySrc, compileCss))
 
 task(
   'default',
