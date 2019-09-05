@@ -1,4 +1,3 @@
-lib/zv-ui.common.js
-lib/zv-ui.umd.js
-lib/zv-ui.umd.min.js
-lib/zv-ui.css
+lib/zv-ui__pc.common.js
+lib/zv-ui__pc.umd.js
+lib/zv-ui__pc.umd.min.js

@@ -36,12 +36,150 @@
       "desc": "基础组件",
       "isMobile": "1",
       "items": [
+        {
+          "desc": "矢量图标",
+          "name": "svg",
+          "isMobile": "1",
+          "path": "/svg"
+        },
+        {
+          "desc": "按钮",
+          "name": "button",
+          "isMobile": "1",
+          "path": "/button"
+        },
+        {
+          "desc": "链接",
+          "name": "link",
+          "isMobile": "1",
+          "path": "/link"
+        },
+        {
+          "desc": "提示",
+          "name": "alert",
+          "isMobile": "1",
+          "path": "/alert"
+        },
+        {
+          "desc": "分页器",
+          "name": "pagination",
+          "isMobile": "1",
+          "path": "/pagination"
+        },
+        {
+          "desc": "表格",
+          "name": "table",
+          "isMobile": "1",
+          "path": "/table"
+        },
+        {
+          "desc": "搜索",
+          "name": "search",
+          "isMobile": "1",
+          "path": "/search"
+        },
+        {
+          "desc": "输入框",
+          "name": "input",
+          "isMobile": "1",
+          "path": "/input"
+        },
+        {
+          "desc": "选择(下拉框)",
+          "name": "select",
+          "isMobile": "1",
+          "path": "/select"
+        },
+        {
+          "desc": "选择(非下拉)",
+          "name": "check",
+          "isMobile": "1",
+          "path": "/check"
+        },
+        {
+          "desc": "选择时间",
+          "name": "selecttime",
+          "isMobile": "1",
+          "path": "/selecttime"
+        },
+        {
+          "desc": "选择(集合)",
+          "name": "selectlabel",
+          "isMobile": "1",
+          "path": "/selectlabel"
+        },
+        {
+          "desc": "级联选择期",
+          "name": "cascader",
+          "isMobile": "1",
+          "path": "/cascader"
+        },
+        {
+          "desc": "标签页",
+          "name": "tabs",
+          "isMobile": "1",
+          "path": "/tabs"
+        },
+        {
+          "desc": "下拉菜单",
+          "name": "dropdown",
+          "isMobile": "1",
+          "path": "/dropdown"
+        },
+        {
+          "desc": "弹窗",
+          "name": "dialog",
+          "isMobile": "1",
+          "path": "/dialog"
+        },
+        {
+          "desc": "中型弹窗",
+          "name": "dialogmiddle",
+          "isMobile": "1",
+          "path": "/dialogmiddle"
+        },
+        {
+          "desc": "全面屏弹窗",
+          "name": "dialogfullscreen",
+          "isMobile": "1",
+          "path": "/dialogfullscreen"
+        },
+        {
+          "desc": "上传",
+          "name": "upload",
+          "isMobile": "1",
+          "path": "/upload"
+        },
+        {
+          "desc": "自定义滚动组件",
+          "name": "scroll",
+          "isMobile": "1",
+          "path": "/scroll"
+        },
+        {
+          "desc": "进度条",
+          "name": "progress",
+          "isMobile": "1",
+          "path": "/progress"
+        }
       ]
     },
     {
       "desc": "表单组件",
       "isMobile": "1",
       "items": [
+        {
+          "desc": "表单",
+          "name": "form",
+          "isMobile": "1",
+          "path": "/form"
+        },
+        {
+          "desc": "动态行内表单",
+          "name": "dymanicform",
+          "isMobile": "1",
+          "path": "/dymanicform"
+        }
       ]
     },
     {
@@ -54,18 +192,22 @@
       "desc": "展示组件",
       "isMobile": "1",
       "items": [
+        {
+          "desc": "一级标题",
+          "name": "title",
+          "isMobile": "1",
+          "path": "/title"
+        },
+        {
+          "desc": "二级标题",
+          "name": "subtitle",
+          "isMobile": "1",
+          "path": "/subtitle"
+        }
       ]
     },
     {
       "desc": "导航组件",
-      "isMobile": "1",
-      "items": [
-      ]
-    }
-  ],
-  "组件使用模板": [
-    {
-      "desc": "选择列表",
       "isMobile": "1",
       "items": [
       ]

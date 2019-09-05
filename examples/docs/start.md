@@ -28,61 +28,33 @@ npm install ZvUI-pc --save
 <!-- {.md} -->
 
 ```
-import {
-  Button,
-  NavBar,
-  Cell,
-  CellGroup,
-  Field,
-  Tabbar,
-  Tab,
-  Tabs,
-  TabbarItem,
-  Uploader,
-  Icon,
-  ImagePreview,
-  Search,
-  Switch,
-  List,
-  PullRefresh,
-  DatetimePicker,
-  Popup,
-  Picker,
-  ActionSheet,
-  NoticeBar,
-  Dialog,
-  Toast,
-  Lazyload,
-  Row,
-  Col
-} from 'vant'
+// element-variables.scss 文件
+$base-color: #7cb342;
+$warning-color: #e53935;
+/* 改变主题色变量 */
+$--color-primary: $base-color;
 
-Vue.use(Button)
-  .use(NavBar)
-  .use(Cell)
-  .use(CellGroup)
-  .use(Field)
-  .use(Tabbar)
-  .use(Tab)
-  .use(Tabs)
-  .use(TabbarItem)
-  .use(Uploader)
-  .use(Icon)
-  .use(ImagePreview)
-  .use(Search)
-  .use(List)
-  .use(PullRefresh)
-  .use(Popup)
-  .use(Picker)
-  .use(Toast)
-  .use(ActionSheet)
-  .use(NoticeBar)
-  .use(Dialog)
-  .use(Switch)
-  .use(DatetimePicker)
-  .use(Lazyload)
-  .use(Row)
-  .use(Col)
+/* 改变warning变量 */
+$--color-warning: $warning-color;
+
+/* 改变 icon 字体路径变量，必需 */
+$--font-path: '~element-ui/lib/theme-chalk/fonts';
+
+@import "~element-ui/packages/theme-chalk/src/index";
+
+import Vue from 'vue'
+import ElementUI from 'element-ui'
+/**
+ * @date 2019/4/1
+ * @author 肖景
+ * @description 修改element-ui中的主题颜色
+ */
+import './element-variables.scss'
+
+Vue.use(ElementUI, {
+  size: 'medium' // set element-ui default size
+})
+
 ```
 
 <!-- {.md} -->
@@ -92,7 +64,7 @@ Vue.use(Button)
 <!-- {.md} -->
 
 ```js
-import ZvUIPC from 'zv-ui_pc' // 引入组件库
+import ZvUI from 'zv-ui__pc' // 引入组件库
 ```
 
 <!-- {.md} -->
@@ -100,13 +72,13 @@ import ZvUIPC from 'zv-ui_pc' // 引入组件库
 引入<!-- {.md} -->样式
 
 ```js
-import 'zv-ui/lib/theme-chalk/index.css' 
+import 'zv-ui__pc/lib/theme-chalk/index.css' 
 ```
 
 最后，全局使用组件库<!-- {.md} -->
 
 ```js
-Vue.use(ZvUIPC)
+Vue.use(ZvUI)
 ```
 
 <!-- {.md} -->
@@ -120,7 +92,7 @@ Vue.use(ZvUIPC)
 <!-- {.md} -->
 
 ```js
-import { ZvButton } from 'ZvUIPC'
+import { ZvButton } from 'ZvUI'
 
 Vue.use(ZvButton)
 ```

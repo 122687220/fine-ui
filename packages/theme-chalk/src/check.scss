@@ -1,0 +1,63 @@
+@import './common/variables.scss';
+@import './common/mixin.scss';
+
+.zv-select-check {
+  width: 100%;
+
+  .el-checkbox-group {
+    @include containerH44();
+    @include flex($justifyContent: flex-start);
+
+    .el-checkbox__input.is-checked .el-checkbox__inner,
+    .el-checkbox__input.is-indeterminate .el-checkbox__inner {
+      background-color: $base-color;
+      border-color: $base-color;
+    }
+
+    .el-checkbox__inner:hover {
+      border-color: $base-color;
+    }
+
+    .el-checkbox__input.is-checked+.el-checkbox__label {
+      color: $base-color;
+    }
+
+    .el-checkbox {
+      color: $base-font-color;
+      margin-right: 40px;
+      width: 160px;
+    }
+
+    .el-checkbox__inner {
+      border-color: $border-color;
+    }
+  }
+
+  .el-radio-group {
+    @include containerH44();
+    @include flex($justifyContent: flex-start);
+
+    .el-radio__input.is-checked .el-radio__inner {
+      background-color: $base-color;
+      border-color: $base-color;
+    }
+
+    .el-radio__inner:hover {
+      border-color: $base-color;
+    }
+
+    .el-radio__input.is-checked+.el-radio__label {
+      color: $base-color;
+    }
+
+    .el-radio {
+      color: $base-font-color;
+      margin-right: 40px;
+      width: 160px;
+    }
+
+    .el-radio__inner {
+      border-color: $border-color;
+    }
+  }
+}

@@ -1,0 +1,43 @@
+@import './common/variables.scss';
+@import './common/mixin.scss';
+
+.zv-pagination {
+  @include containerH44($showWidth: false);
+  @include flex();
+  .el-pagination {
+    padding: 0 5px;
+    display: flex;
+    align-items: center;
+
+    .el-pager {
+      li {
+        height: 44px;
+        line-height: 44px;
+      }
+    }
+
+    button:hover {
+      color: $base-color;
+    }
+  }
+
+  .el-pagination__sizes .el-input .el-input__inner {
+    font-size: $sub-font-size;
+    @include inputBorder();
+  }
+
+  .el-pagination__total {
+    color: $sub-font-color !important;
+  }
+
+  .el-pagination button,
+  .el-pagination span:not([class*='suffix']) {
+    font-size: $sub-font-size;
+  }
+
+  .el-pagination__jump {
+    .el-input__inner {
+      font-size: $sub-font-size;
+    }
+  }
+}

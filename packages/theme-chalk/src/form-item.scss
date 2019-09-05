@@ -1,0 +1,22 @@
+.zv-form-item {
+  .zv-form-item__normal .el-form-item__error {
+    bottom: 0;
+    text-align: left;
+    position: relative;
+    top: 0;
+    margin: 4px 0;
+  }
+
+  .zv-form-item__normal,
+  .zv-form-item__inline {
+    margin-bottom: 0;
+  }
+
+  .zv-form-item__inline .el-form-item__error {
+    bottom: 0;
+    text-align: right;
+    position: relative;
+    top: 0;
+    margin: 4px 0;
+  }  
+}

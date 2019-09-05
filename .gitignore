@@ -2,6 +2,7 @@
 node_modules
 /dist
 /packages/theme-chalk/lib
+lib
 
 # local env files
 .env.local

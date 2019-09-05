@@ -3,10 +3,15 @@
 import Vue from 'vue'
 import App from './App'
 import router from './router'
+import './plugins/element-variables.scss'
+import './plugins'
+import './assets/scss/index.scss'
 import demoBlock from './components/demo-block.vue'
-// import VueCards from '../../packages/index'
-// import '../lib/theme-chalk/index.css'
-// import '../../packages/theme-chalk/lib/index.px.css'
+import ZvUI from '../../packages/index'
+import './icons'
+
+Vue.use(ZvUI)
+import '../../packages/theme-chalk/lib/index.css'
 
 // Vue.use(VueCards)
 const Demos = []

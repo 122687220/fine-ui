@@ -1,5 +1,5 @@
 'use strict'
-const { watch, series, src, dest, parallel } = require('gulp')
+const { watch, series, src, dest, parallel, task } = require('gulp')
 const postcss = require('gulp-postcss')
 const sass = require('gulp-sass')
 const cssmin = require('gulp-cssmin')
@@ -26,6 +26,10 @@ function cleanLib() {
   }).pipe(clean())
 }
 
+function copySrc() {
+  return src('./src/**/*.scss').pipe(dest('./lib/src'))
+}
+
 function compileCss() {
   return src('./src/*.scss')
     .pipe(sass.sync())
@@ -45,24 +49,18 @@ function compileCss() {
     .pipe(dest('./lib'))
 }
 
-function copyFont() {
-  return src('./src/fonts/**').pipe(dest('./lib/fonts'))
-}
-
 function watchCss() {
   // return watch('./src/*.scss', parallel(compileCss, compileCssToPx))
   return watch('./src/*.scss', compileCss)
 }
 
-function watchFonts() {
-  return watch('./src/fonts/**', copyFont)
-}
+task('build', parallel(cleanLib, copySrc, compileCss))
 
-// exports.build = parallel(compileCss, compileCssToPx, copyFont)
-exports.build = parallel(cleanLib, compileCss, copyFont)
-exports.default = series(
-  compileCss,
-  // compileCssToPx,
-  copyFont,
-  parallel(watchCss, watchFonts)
+task(
+  'default',
+  series(
+    compileCss,
+    // compileCssToPx,
+    parallel(watchCss)
+  )
 )

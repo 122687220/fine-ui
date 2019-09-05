@@ -1,0 +1,5 @@
+.zv-scrollbar {
+  /deep/ .el-scrollbar__wrap {
+    overflow-x: hidden!important;
+  }
+}

@@ -3,7 +3,9 @@
     <mainHeader></mainHeader>
     <div class="container">
       <sideNav class="nav"></sideNav>
-      <router-view class="view"></router-view>
+      <zv-locale-provider :locale="locale">
+        <router-view class="view"></router-view>
+      </zv-locale-provider>
     </div>
     <mainFooter></mainFooter>
   </div>
@@ -29,6 +31,11 @@ export default {
         let name = window.location.hash.substring(2)
         router.push({ name })
       }
+    }
+  },
+  data() {
+    return {
+      locale: 'en_US'
     }
   },
   components: {

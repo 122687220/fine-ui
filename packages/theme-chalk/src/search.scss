@@ -1,5 +1,48 @@
+@import './common/variables.scss';
+@import './common/mixin.scss';
+
 .zv-search {
-  .van-cell {
-    background-color: #f5f5f5;
+  @include inputBorder();
+  width: 320px;
+  display: flex;
+  border-radius: 4px;
+  font-size: $sub-font-size;
+  height: 32px;
+  align-items: center;
+
+  &__text {
+    width: 80px;
+    height: 32px;
+    text-align: center;
+    line-height: 32px;
+    position: relative;
+    cursor: pointer;
+    color: $base-font-color;
+
+    &:before {
+      content: '';
+      position: absolute;
+      height: 16px;
+      width: 1px;
+      background-color: $border-color;
+      top: 50%;
+      left: 0;
+      margin-top: -8px;
+    }
+  }
+  .el-input__inner {
+    background: transparent;
+    border-color: #fff;
+    height: 30px !important;
+    line-height: 30px !important;
+    border-width: 0;
+
+    &:focus {
+      border-width: 0;
+    }
+  }
+
+  .el-input--medium .el-input__icon {
+    line-height: 30px;
   }
 }

@@ -1,7 +1,7 @@
 <template>
   <div class="page-footer">
     <a
-      href="https://dev.tencent.com/u/liuyulin/p/zv-ui/git"
+      href="https://git.dev.tencent.com/xiaojing123/ZvUI-pc.git"
       target="_blank"
       class="page-footer__github-link"
     >
