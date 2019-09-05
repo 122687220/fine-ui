@@ -1,6 +1,6 @@
 {
   "name": "zv-ui__pc",
-  "version": "0.0.14",
+  "version": "0.0.15",
   "description": "中科云谷产品部电脑端端组件库",
   "main": "lib/zv-ui.common.js",
   "style": "lib/theme-chalk/index.pc.css",

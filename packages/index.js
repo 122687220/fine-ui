@@ -1,7 +1,7 @@
 /* eslint-disable */
 // This file is auto gererated by build/build-entry.js
 import Svg from './svg'
-const version = '0.0.14'
+const version = '0.0.15'
 const components = [
   Svg
 ]
