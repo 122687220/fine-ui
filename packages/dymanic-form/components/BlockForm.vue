@@ -65,6 +65,7 @@ export default create({
   },
   created() {
     this.initValue()
+    console.log(this)
   },
   methods: {
     initValue() {

@@ -8,6 +8,9 @@
       type="block"
       v-model="value1"
       :schema="schema1"
+      :style="{
+        justifyContent: 'space-between'
+      }"
     >
       <div>这个地方是插槽</div>
     </zv-dymanic-form>
@@ -112,25 +115,53 @@ export default {
             }
           ]
         },
-        email: {
+        url: {
           componentName: 'ZvInput',
-          label: '邮箱',
-          placeholder: '请输入您的邮箱',
-          widthType: 'big',
+          label: '网址',
+          placeholder: '请输入您的网址',
           labelTop: true,
+          widthType: 'default',
           required: true,
           showBorder: true,
-          rules: [
-            {
-              validator: (rule, value, callback) => {
-                if (value === '') {
-                  callback(new Error('请再次输入密码'))
-                } else {
-                  callback()
-                }
-              },
-              trigger: 'blur'
-            }
+          validator: [
+            [
+              'checkUrl',
+              {
+                msg: '网址格式错误'
+              }
+            ],
+            [
+              'checkRequired',
+              {
+                msg: '网址不能为空'
+              }
+            ]
+          ]
+        },
+        length: {
+          componentName: 'ZvInput',
+          label: '长度',
+          placeholder: '请输入长度在3到10之间',
+          labelTop: true,
+          widthType: 'big',
+          required: true,
+          showBorder: true,
+          validator: [
+            [
+              'checkLength',
+              {
+                min: 3,
+                max: 10,
+                minMsg: '少于3个字',
+                maxMsg: '多于10个字'
+              }
+            ],
+            [
+              'checkRequired',
+              {
+                msg: '网址不能为空'
+              }
+            ]
           ]
         },
         select: {
@@ -162,6 +193,27 @@ export default {
           componentType: 'Select',
           isRequired: true,
           title: '机型'
+        },
+        email: {
+          componentName: 'ZvInput',
+          label: '邮箱',
+          placeholder: '请输入您的邮箱',
+          widthType: 'big',
+          labelTop: true,
+          required: true,
+          showBorder: true,
+          rules: [
+            {
+              validator: (rule, value, callback) => {
+                if (value === '') {
+                  callback(new Error('请再次输入密码'))
+                } else {
+                  callback()
+                }
+              },
+              trigger: 'blur'
+            }
+          ]
         },
         time: {
           componentName: 'ZvSelectLabel',

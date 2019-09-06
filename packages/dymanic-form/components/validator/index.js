@@ -4,6 +4,8 @@ import checkNumber from './number'
 import checkPhone from './phone'
 import checkRequired from './required'
 import checkUrl from './url'
+import checkLength from './length'
+import checkRange from './range'
 
 export default {
   checkIDcard,
@@ -11,5 +13,7 @@ export default {
   checkNumber,
   checkPhone,
   checkRequired,
-  checkUrl
+  checkLength,
+  checkUrl,
+  checkRange
 }
