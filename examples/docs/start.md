@@ -18,7 +18,7 @@
   1. nrm add xxx http://registry.lhanyun.com/  (添加npm源，xxx自己命名).
   2. nrm use xxx (切换npm源)
 )
-npm install ZvUI-pc --save
+npm install zv-ui__pc --save
 ```
 
 <!-- {.md} -->
