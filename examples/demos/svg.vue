@@ -1,7 +1,7 @@
 <template>
   <div class="svg-page__wrapper">
     <div v-for="(item, index) in showSVG" :key="index" class="svg-page__item">
-      <zv-svg-icon :icon-class="item" :class-name="index % 2 ? 'red' : ''" />
+      <zv-svg-icon :icon-class="item" class-name="red" />
       <div class="svg-page__title">{{ item }}</div>
     </div>
   </div>
