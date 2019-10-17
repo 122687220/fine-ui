@@ -165,7 +165,7 @@ export default create({
             data={tableData}
             width="100%"
             onSelect={handleSelect}
-            onSelectAll={handleSelect}
+            onSelect-all={handleSelect}
             rowClassName={rowDisabledStyle}
             headerRowClassName="zv-table_header-class"
             height={params.height ? params.height : params.maxHeight}

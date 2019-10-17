@@ -109,7 +109,12 @@ export default {
             align: 'right',
             fixed: 'right',
             render: function({ row }) {
-              return <zv-button onClick={() => self.click(row)}>dddd</zv-button>
+              return (
+                <div>
+                  <zv-button onClick={() => self.click(row)}>dddd</zv-button>
+                  <zv-button onClick={() => self.click(row)}>ccccc</zv-button>
+                </div>
+              )
             }
           }
         ]
