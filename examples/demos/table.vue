@@ -34,7 +34,6 @@ export default {
           {
             prop: 'status',
             label: '状态',
-            width: `200px`,
             render: {
               default: ({ row }) => {
                 const { status = '0' } = row
@@ -46,11 +45,11 @@ export default {
               }
             }
           },
-          { prop: 'name', label: '名称', width: `200px` },
-          { prop: 'address', label: '地址', width: `200px`, align: 'center' },
-          { prop: 'content', label: '内容', width: `200px`, sortable: true },
-          { prop: 'date', label: '日期', width: `200px` },
-          { prop: 'count', label: '金额', width: `200px` },
+          { prop: 'name', label: '名称' },
+          // { prop: 'address', label: '地址', width: `200px`, align: 'center' },
+          // { prop: 'content', label: '内容', width: `200px`, sortable: true },
+          // { prop: 'date', label: '日期', width: `200px` },
+          // { prop: 'count', label: '金额', width: `200px` },
           {
             prop: 'operate',
             label: '操作',

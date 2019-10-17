@@ -143,7 +143,7 @@ export default create({
             fixed={column.fixed}
             align={column.align || `left`}
             min-width="100px"
-            width={column.width || `200px`}
+            width={column.width}
             prop={column.prop}
             key={index}
             sortable={column.sortable}
