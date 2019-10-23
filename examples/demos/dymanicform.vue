@@ -9,7 +9,7 @@
       v-model="value1"
       :schema="schema1"
       :style="{
-        justifyContent: 'space-between'
+        justifyContent: 'flex-start'
       }"
     >
       <div>这个地方是插槽</div>
@@ -193,6 +193,22 @@ export default {
           componentType: 'Select',
           isRequired: true,
           title: '机型'
+        },
+        select0: {
+          componentName: 'ZvSelectLabel',
+          options: options,
+          placeholder: '请选择',
+          componentType: 'Select',
+          isRequired: true,
+          title: '机型2'
+        },
+        select9: {
+          componentName: 'ZvSelectLabel',
+          options: options,
+          placeholder: '请选择',
+          componentType: 'Select',
+          isRequired: true,
+          title: '机型9'
         },
         email: {
           componentName: 'ZvInput',

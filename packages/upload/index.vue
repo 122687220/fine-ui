@@ -1,15 +1,15 @@
 <template>
-  <div class="zv-upload">
+  <div class="zv-upload" ref="zvUpload">
     <div class="zv-upload-title">
       {{ title || localeLang.title || '上传附件' }}
       <span>{{ subTitle || localeLang.subTitle || '格式要求' }}</span>
-      <i v-if="haveExample" class="green" @click="exampleVisible = true">
-        {{ localeLang.example || '示例' }}
-        <zv-svg-icon icon-class="eye" />
-      </i>
     </div>
+    <p v-if="haveExample" class="green" @click="exampleVisible = true">
+      <zv-svg-icon icon-class="eye" />
+      {{ localeLang.example || '示例图' }}
+    </p>
     <template v-if="type === 'default'">
-      <el-upload v-bind="$attrs" v-on="$listeners">
+      <el-upload :fileList="fileList" v-bind="$attrs" v-on="$listeners">
         <template v-slot:default>
           <slot />
         </template>
@@ -19,9 +19,15 @@
       <el-upload
         v-bind="$attrs"
         v-on="$listeners"
+        :fileList="fileList"
         :on-preview="handlePictureCardPreview"
       >
-        <i class="el-icon-plus"></i>
+        <div class="zv-upload__upload">
+          <i class="el-icon-plus"></i>
+          <div class="zv-upload__upload-name" v-if="uploadName">
+            {{ uploadName }}
+          </div>
+        </div>
       </el-upload>
     </template>
 
@@ -30,7 +36,7 @@
       bodyHeight="600px"
       width="600px"
       :btn-list="[]"
-      title=""
+      title=" "
       append-to-body
     >
       <img width="100%" :src="dialogImageUrl" alt="" />
@@ -47,13 +53,17 @@
       "
       append-to-body
     >
-      <img
-        width="100%"
-        :src="exampleImgSrc"
-        :alt="
-          localeLang.exampleImage || localeLang.exampleDescription || '示例图片'
-        "
-      />
+      <slot name="exampleImgSlot">
+        <img
+          width="100%"
+          :src="exampleImgSrc"
+          :alt="
+            localeLang.exampleImage ||
+              localeLang.exampleDescription ||
+              '示例图片'
+          "
+        />
+      </slot>
     </zv-dialog>
   </div>
 </template>
@@ -91,7 +101,13 @@ export default create({
     exampleDescription: {
       type: String
     },
+    fileList: {
+      type: Array
+    },
     exampleImgSrc: {
+      type: String
+    },
+    uploadName: {
       type: String
     }
   },
@@ -100,6 +116,25 @@ export default create({
       dialogImageUrl: '',
       dialogVisible: false,
       exampleVisible: false
+    }
+  },
+  watch: {
+    fileList: {
+      handler(array) {
+        if (this.$attrs.limit) {
+          let dom = this.$refs.zvUpload
+          dom = dom.querySelector('.el-upload--picture-card')
+          if (array.length === this.$attrs.limit) {
+            if (dom && dom.style.display !== 'none') {
+              dom.style.display = 'none'
+            }
+          } else {
+            if (dom && dom.style.display === 'none') {
+              dom.style.display = 'inline-block'
+            }
+          }
+        }
+      }
     }
   },
   computed: {

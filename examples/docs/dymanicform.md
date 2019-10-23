@@ -307,6 +307,7 @@ export default {
 | `v-model`      | `表单数据`                                 | `Object` | -      | {}         |
 | `type`      | `表单类型`                                 | `String` | `inline | block`     | `block`         |
 | `scheme`      | `表单元素描述`                                 | `Object` | -    | -         |
+| `inDialog`      | `是否是弹窗内的表单`                                 | `Boolean` | -    | -         |
 
 ## scheme详细说明
 

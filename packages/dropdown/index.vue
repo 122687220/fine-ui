@@ -1,9 +1,9 @@
 <template>
   <el-dropdown class="zv-dropdown" v-bind="$attrs" v-on="$listeners">
     <div>
-      <slot
-        ><span>{{ localeLang.default || '点击触发下拉框' }}</span></slot
-      >
+      <slot>
+        <span>{{ localeLang.default || '点击触发下拉框' }}</span>
+      </slot>
     </div>
     <el-dropdown-menu slot="dropdown" v-if="itemLists.length">
       <el-dropdown-item

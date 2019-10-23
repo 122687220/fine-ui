@@ -61,6 +61,12 @@
           "path": "/alert"
         },
         {
+          "desc": "表单纯展示",
+          "name": "display",
+          "isMobile": "1",
+          "path": "/display"
+        },
+        {
           "desc": "分页器",
           "name": "pagination",
           "isMobile": "1",
@@ -71,6 +77,18 @@
           "name": "table",
           "isMobile": "1",
           "path": "/table"
+        },
+        {
+          "desc": "表格操作",
+          "name": "tableoperate",
+          "isMobile": "1",
+          "path": "/tableoperate"
+        },
+        {
+          "desc": "表格页脚",
+          "name": "tablefooter",
+          "isMobile": "1",
+          "path": "/tablefooter"
         },
         {
           "desc": "搜索",

@@ -55,7 +55,7 @@ export default create({
   props: {
     width: {
       type: String,
-      default: '440px'
+      default: '640px'
     },
     bodyHeight: {
       type: String,

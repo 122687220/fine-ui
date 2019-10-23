@@ -50,6 +50,7 @@
     </zv-upload>
 
     <zv-upload
+      style="margin-top: 30px;"
       action="#"
       title="多张图片上传带预览"
       list-type="picture-card"
@@ -60,15 +61,23 @@
     </zv-upload>
 
     <zv-upload
+      style="margin-top: 30px;"
       action="#"
       title="多张图片上传带预览"
       list-type="picture-card"
       :auto-upload="false"
       type="imgLists"
       :before-remove="beforeRemove"
+      :on-remove="handleRemove"
       have-example
+      :file-list="fileList"
+      :limit="3"
+      uploadName="上传点好东西"
       example-description="这是一个简单的描述文件，纯粹测试用的"
     >
+      <div slot="exampleImgSlot">
+        ddd
+      </div>
     </zv-upload>
   </div>
 </template>
@@ -160,3 +169,11 @@ export default {
 | `haveExample`      | `是否需要显示示例图片`                                 | `Boolean` | `true | false`      | `false`         |
 | `exampleDescription`      | `显示示例图片的描述`                                 | `String` | -      | -         |
 | `exampleImgSrc`      | `显示示例图片的路径`                                 | `String` | -      | -         |
+| `uploadName`      | `上传下面的文字提示`                                 | `String` | -      | -         |
+
+## 插槽 slot
+<!-- {.md} -->
+
+| 插槽名      | 说明                               
+| --------- | -------------------------------------- |
+| `exampleImgSlot`      | `示例图的插槽`                                 |

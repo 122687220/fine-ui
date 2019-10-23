@@ -7,6 +7,7 @@ import Check from './check'
 import Dialog from './dialog'
 import DialogFullscreen from './dialog-fullscreen'
 import DialogMiddle from './dialog-middle'
+import Display from './display'
 import Dropdown from './dropdown'
 import DymanicForm from './dymanic-form'
 import Form from './form'
@@ -24,10 +25,12 @@ import SelectTime from './select-time'
 import SubTitle from './sub-title'
 import Svg from './svg'
 import Table from './table'
+import TableFooter from './table-footer'
+import TableOperate from './table-operate'
 import Tabs from './tabs'
 import Title from './title'
 import Upload from './upload'
-const version = '0.0.22'
+const version = '0.1.0'
 const components = [
   Alert,
   Button,
@@ -36,6 +39,7 @@ const components = [
   Dialog,
   DialogFullscreen,
   DialogMiddle,
+  Display,
   Dropdown,
   DymanicForm,
   Form,
@@ -53,6 +57,8 @@ const components = [
   SubTitle,
   Svg,
   Table,
+  TableFooter,
+  TableOperate,
   Tabs,
   Title,
   Upload
@@ -76,6 +82,7 @@ export {
   Dialog,
   DialogFullscreen,
   DialogMiddle,
+  Display,
   Dropdown,
   DymanicForm,
   Form,
@@ -93,6 +100,8 @@ export {
   SubTitle,
   Svg,
   Table,
+  TableFooter,
+  TableOperate,
   Tabs,
   Title,
   Upload

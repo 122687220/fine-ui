@@ -27,6 +27,20 @@ export default {
   data() {
     const self = this
     return {
+      itemLists1: [
+        {
+          name: '编辑',
+          command: 'a'
+        },
+        {
+          name: 'b',
+          command: 'b'
+        },
+        {
+          name: 'c',
+          command: 'c'
+        }
+      ],
       tableParam: {
         haveCheckBox: true,
         height: 300,
@@ -46,10 +60,10 @@ export default {
             }
           },
           { prop: 'name', label: '名称' },
-          // { prop: 'address', label: '地址', width: `200px`, align: 'center' },
-          // { prop: 'content', label: '内容', width: `200px`, sortable: true },
-          // { prop: 'date', label: '日期', width: `200px` },
-          // { prop: 'count', label: '金额', width: `200px` },
+          { prop: 'address', label: '地址', width: `200px`, align: 'center' },
+          { prop: 'content', label: '内容', width: `200px`, sortable: true },
+          { prop: 'date', label: '日期', width: `200px` },
+          { prop: 'count', label: '金额', width: `200px` },
           {
             prop: 'operate',
             label: '操作',
@@ -92,27 +106,30 @@ export default {
           { prop: 'address', label: '地址', width: `200px`, align: 'center' },
           { prop: 'content', label: '内容', width: `200px`, sortable: true },
           { prop: 'date', label: '日期', width: `200px` },
-          {
-            prop: 'count',
-            label: '金额',
-            align: 'center',
-            columns: [
-              { prop: 'count1', label: '日金额' },
-              { prop: 'count2', label: '周金额' },
-              { prop: 'count3', label: '月金额' }
-            ]
-          },
+          // {
+          //   prop: 'count',
+          //   label: '金额',
+          //   align: 'center',
+          //   columns: [
+          //     { prop: 'count1', label: '日金额' },
+          //     { prop: 'count2', label: '周金额' },
+          //     { prop: 'count3', label: '月金额' }
+          //   ]
+          // },
           {
             prop: 'operate',
             label: '操作',
-            align: 'right',
+            align: 'center',
             fixed: 'right',
+            width: '160px',
+            showOverflowTooltip: '0',
             render: function({ row }) {
               return (
-                <div>
-                  <zv-button onClick={() => self.click(row)}>dddd</zv-button>
-                  <zv-button onClick={() => self.click(row)}>ccccc</zv-button>
-                </div>
+                <zv-table-operate
+                  trigger="click"
+                  params={self.itemLists1}
+                  onCommand={command => self.commandHandler(command, row)}
+                />
               )
             }
           }
@@ -209,6 +226,9 @@ export default {
     },
     click(row) {
       console.log(row)
+    },
+    commandHandler(item, row) {
+      console.log(item, row)
     }
   }
 }

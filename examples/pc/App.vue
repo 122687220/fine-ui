@@ -35,7 +35,7 @@ export default {
   },
   data() {
     return {
-      locale: 'en_US'
+      locale: 'zh_CN'
     }
   },
   components: {

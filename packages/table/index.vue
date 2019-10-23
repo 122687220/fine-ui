@@ -86,6 +86,9 @@ export default create({
      * @description 表格内容为禁用状态时的样式
      */
     rowDisabledStyle(row) {
+      if (this.params.disabledFunction) {
+        return this.params.disabledFunction(row)
+      }
       return row.row.isDisabled ? 'rowDisabled' : ''
     },
     /**
@@ -94,6 +97,9 @@ export default create({
      * @description 表格内容为禁用状态
      */
     selectInit(row) {
+      if (this.params.disabledFunction) {
+        return this.params.disabledFunction(row)
+      }
       return !row.isDisabled
     }
   },
@@ -112,6 +118,8 @@ export default create({
       <el-table-column
         align="center"
         type="selection"
+        fixed="left"
+        width="60px"
         selectable={selectInit}
       />
     ) : null
@@ -148,7 +156,7 @@ export default create({
             key={index}
             sortable={column.sortable}
             label={column.label}
-            showOverflowTooltip={column.showOverflowTooltip || true}
+            showOverflowTooltip={column.showOverflowTooltip !== '0' && true}
             scopedSlots={scopedSlots(column)}
           >
             {column.columns ? columnsComponent(column.columns) : []}

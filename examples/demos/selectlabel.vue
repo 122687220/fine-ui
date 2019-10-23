@@ -26,7 +26,7 @@
         :options="options"
         placeholder="请选择"
         component-name="Select"
-        width-type="big"
+        width-type="super"
         title="机型"
       />
     </example-wrapper>

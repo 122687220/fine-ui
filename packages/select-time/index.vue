@@ -2,8 +2,7 @@
   <div
     :class="[
       'zv-select-time',
-      timeType === 'daterange' ? 'zv-select-time--daterange' : '',
-      timeType === 'monthrange' ? 'zv-select-time--daterange' : '',
+      timeType.includes('range') ? 'zv-select-time--daterange' : '',
       $attrs.disabled ? 'is-disabled' : ''
     ]"
     @mouseenter="mouseenter"

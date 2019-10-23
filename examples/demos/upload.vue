@@ -26,6 +26,7 @@
     </zv-upload>
 
     <zv-upload
+      style="margin-top: 30px;"
       action="#"
       title="多张图片上传带预览"
       list-type="picture-card"
@@ -36,20 +37,29 @@
     </zv-upload>
 
     <zv-upload
+      style="margin-top: 30px;"
       action="#"
       title="多张图片上传带预览"
       list-type="picture-card"
       :auto-upload="false"
       type="imgLists"
       :before-remove="beforeRemove"
+      :on-remove="handleRemove"
       have-example
+      :file-list="fileList"
+      :limit="3"
+      uploadName="上传点好东西"
       example-description="这是一个简单的描述文件，纯粹测试用的"
     >
+      <div slot="exampleImgSlot">
+        ddd
+      </div>
     </zv-upload>
   </div>
 </template>
 
 <script>
+import ui1 from './../images/ui-1.png'
 export default {
   name: 'UploadDemo',
   data() {
@@ -64,6 +74,10 @@ export default {
           name: 'food2.jpeg',
           url:
             'https://fuss10.elemecdn.com/3/63/4e7f3a15429bfda99bce42a18cdd1jpeg.jpeg?imageMogr2/thumbnail/360x360/format/webp/quality/100'
+        },
+        {
+          name: '2.jpg',
+          url: ui1
         }
       ],
       imageUrl: ''
@@ -72,6 +86,7 @@ export default {
   methods: {
     handleRemove(file, fileList) {
       console.log(file, fileList)
+      this.fileList = fileList
     },
     handlePreview(file) {
       console.log(file)

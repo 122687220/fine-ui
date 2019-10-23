@@ -5,7 +5,7 @@
   @include flex();
   @include inputBorder();
   margin: 6px 0;
-  width: 160px;
+  width: 280px;
   border-radius: 4px;
   height: 32px;
   font-size: $base-font-size;
@@ -23,36 +23,7 @@
 }
 
 .zv-select-time--daterange {
-  width: 404px;
-}
-
-.zv-select-time_cursor {
-  cursor: pointer;
-}
-
-.zv-select-time {
-  @include flex();
-  @include inputBorder();
-  margin: 6px 0;
-  width: 160px;
-  border-radius: 4px;
-  height: 32px;
-  font-size: $base-font-size;
-  padding-right: 5px;
-
-  &-icon {
-    line-height: 32px;
-    height: 32px;
-    color: #c0c4cc;
-  }
-}
-
-.zv-select-time.is-disabled {
-  background: #f5f7fa;
-}
-
-.zv-select-time--daterange {
-  width: 404px;
+  width: 400px;
 }
 
 .zv-select-time_cursor {

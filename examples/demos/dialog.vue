@@ -16,12 +16,7 @@
     <zv-dialog v-model="dialogVisible1">
       这是个提示消息
     </zv-dialog>
-    <zv-dialog
-      v-model="dialogVisible2"
-      width="440px"
-      bodyHeight="200px"
-      :showClose="true"
-    >
+    <zv-dialog v-model="dialogVisible2" :showClose="true">
       <div style="height: 310px;">
         <zv-input
           label="登录密码"

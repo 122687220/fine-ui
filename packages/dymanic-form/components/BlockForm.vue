@@ -6,6 +6,12 @@
         :rules="item.rules"
         v-for="(item, index) in schema"
         :key="index"
+        :class="[
+          item.componentType === 'SelectTime' && item.timeType.includes('range')
+            ? 'zv-form__block'
+            : '',
+          'zv-dymanic-form__item'
+        ]"
       >
         <zv-input
           v-model="currentValue[index]"
@@ -66,6 +72,12 @@ export default create({
   created() {
     this.initValue()
     console.log(this)
+    for (let item in this.schema) {
+      console.log(
+        this.schema[item].timeType &&
+          this.schema[item].timeType.includes('range')
+      )
+    }
   },
   methods: {
     initValue() {

@@ -78,5 +78,5 @@
 | `row`      | `是否是在同一行`                                 | `Boolean` | `true | false`      | `false`         |
 | `isRequired`      | `是否需要必须*的符号`                                 | `Boolean` | `true | false`      | `false`         |
 | `componentName`      | `当前组件是`                                 | `String` | `Select | SelectTime | Check`      | `Select`         |
-| widthType      | 宽度大小(row为false,同时组件为select时)                                | `String` | `default | big | full`      | -         |
+| widthType      | 宽度大小(row为false,同时组件为select时)                                | `String` | `default | super`      | -         |
 

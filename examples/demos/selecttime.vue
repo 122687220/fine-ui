@@ -3,7 +3,7 @@
     <div class="list">
       <zv-select-time
         v-model="value2"
-        time-type="monthrange"
+        time-type="datetimerange"
         placeholder="请选择"
         range-separator="至"
         start-placeholder="开始月份"

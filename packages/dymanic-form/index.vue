@@ -1,21 +1,23 @@
 <template>
-  <inline-form
-    v-model="currentValue"
-    v-bind="$attrs"
-    v-on="$listeners"
-    v-if="type === 'inline'"
-  >
-    <slot></slot>
-  </inline-form>
-  <block-form2
-    ref="form"
-    v-model="currentValue"
-    v-bind="$attrs"
-    v-on="$listeners"
-    v-else
-  >
-    <slot></slot>
-  </block-form2>
+  <div :class="[inDialog ? 'zv-dymanic-dialog__form' : 'zv-dymanic__form']">
+    <inline-form
+      v-model="currentValue"
+      v-bind="$attrs"
+      v-on="$listeners"
+      v-if="type === 'inline'"
+    >
+      <slot></slot>
+    </inline-form>
+    <block-form2
+      ref="form"
+      v-model="currentValue"
+      v-bind="$attrs"
+      v-on="$listeners"
+      v-else
+    >
+      <slot></slot>
+    </block-form2>
+  </div>
 </template>
 
 <script>
@@ -38,6 +40,10 @@ export default create({
       validator(value) {
         return ['block', 'inline'].includes(value)
       }
+    },
+    inDialog: {
+      type: Boolean,
+      default: false
     }
   },
   methods: {
