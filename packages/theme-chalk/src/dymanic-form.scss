@@ -1,0 +1,32 @@
+.zv-dymanic__form {
+  .zv-dymanic-form__item {
+    min-width: 33.333%;
+    order: 1;
+    .el-form-item {
+      min-width: 280px;
+      display: inline-block;
+    }
+  }
+
+  .zv-form__block {
+    width: 100%;
+    order: 2;
+  }
+}
+
+.zv-dymanic-dialog__form {
+  .zv-dymanic-form__item {
+    min-width: 50%;
+    order: 1;
+
+    .el-form-item {
+      min-width: 280px;
+      display: inline-block;
+    }
+  }
+
+  .zv-form__block {
+    width: 100%;
+    order: 2;
+  }
+}

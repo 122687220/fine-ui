@@ -1,0 +1,6 @@
+@import './common/variables.scss';
+@import './common/mixin.scss';
+
+.zv-table__operate {
+  @include flex($justifyContent: space-around);
+}
