@@ -22,7 +22,7 @@ export default create({
   mixins: [ZvModel],
   props: {
     options: {
-      type: Array,
+      type: [Array, Object],
       default() {
         return []
       }

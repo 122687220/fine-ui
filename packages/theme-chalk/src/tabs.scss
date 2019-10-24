@@ -4,7 +4,7 @@
 .zv-tabs {
   width: 100%;
   .el-tabs__header {
-    margin-bottom: 28px;
+    margin-bottom: 0px;
   }
   .el-tabs__item {
     @include containerH44($color: $sub-font-color, $showWidth: false);
