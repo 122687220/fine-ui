@@ -7,7 +7,12 @@
       >
         {{ params[0].name }}
       </zv-link>
-      <zv-dropdown :item-lists="moreParams" v-bind="$attrs" v-on="$listeners">
+      <zv-dropdown
+        v-if="params.length >= 1"
+        :item-lists="moreParams"
+        v-bind="$attrs"
+        v-on="$listeners"
+      >
         <zv-link type="primary">{{ localeLang.more }}</zv-link>
       </zv-dropdown>
     </template>
