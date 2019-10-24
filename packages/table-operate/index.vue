@@ -8,7 +8,7 @@
         {{ params[0].name }}
       </zv-link>
       <zv-dropdown
-        v-if="params.length >= 1"
+        v-if="params.length > 1"
         :item-lists="moreParams"
         v-bind="$attrs"
         v-on="$listeners"
