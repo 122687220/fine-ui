@@ -30,7 +30,7 @@ import TableOperate from './table-operate'
 import Tabs from './tabs'
 import Title from './title'
 import Upload from './upload'
-const version = '0.1.4'
+const version = '0.1.5'
 const components = [
   Alert,
   Button,

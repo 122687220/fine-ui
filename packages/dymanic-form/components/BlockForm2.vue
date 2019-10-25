@@ -21,7 +21,7 @@ export default create({
     }
   },
   render(h) { // eslint-disable-line
-    const { $attrs, $listeners, currentValue } = this
+    const { $attrs, $listeners, currentValue, $slots } = this
     const { schema } = deepCopy($attrs)
     for (const key in schema) {
       if (schema[key].validator && schema[key].validator.length) {
@@ -36,7 +36,9 @@ export default create({
     const attrs = Object.assign({}, $attrs, { schema })
     // 最终的渲染函数
     return (
-      <BlockForm vModel={currentValue} {...{ attrs, listeners: $listeners }} />
+      <BlockForm vModel={currentValue} {...{ attrs, listeners: $listeners }}>
+        {$slots.default}
+      </BlockForm>
     )
   }
 })

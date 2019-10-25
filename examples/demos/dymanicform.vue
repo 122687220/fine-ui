@@ -12,7 +12,7 @@
         justifyContent: 'flex-start'
       }"
     >
-      <div>这个地方是插槽</div>
+      <div style="width: 100%; order: 2;">这个地方是插槽</div>
     </zv-dymanic-form>
     <div>
       <zv-button @click="submit">提交</zv-button>
