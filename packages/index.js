@@ -17,6 +17,7 @@ import Link from './link'
 import LocaleProvider from './locale-provider'
 import Pagination from './pagination'
 import Progress from './progress'
+import Reconfirm from './reconfirm'
 import Scroll from './scroll'
 import Search from './search'
 import Select from './select'
@@ -30,7 +31,7 @@ import TableOperate from './table-operate'
 import Tabs from './tabs'
 import Title from './title'
 import Upload from './upload'
-const version = '0.1.5'
+const version = '0.1.6'
 const components = [
   Alert,
   Button,
@@ -49,6 +50,7 @@ const components = [
   LocaleProvider,
   Pagination,
   Progress,
+  Reconfirm,
   Scroll,
   Search,
   Select,
@@ -92,6 +94,7 @@ export {
   LocaleProvider,
   Pagination,
   Progress,
+  Reconfirm,
   Scroll,
   Search,
   Select,

@@ -151,6 +151,12 @@
           "path": "/dialog"
         },
         {
+          "desc": "命令式弹窗(用于用户二次确认)",
+          "name": "reconfirm",
+          "isMobile": "1",
+          "path": "/reconfirm"
+        },
+        {
           "desc": "中型弹窗",
           "name": "dialogmiddle",
           "isMobile": "1",
