@@ -2,7 +2,7 @@
 @import './common/mixin.scss';
 
 .zv-input {
-  min-width: 280px;
+  min-width: $input-width;
 
   .zv-input__content {
     flex-basis: auto !important;
@@ -140,7 +140,7 @@
 }
 .zv-input.default {
   box-sizing: border-box;
-  width: 280px;
+  width: $input-width;
 }
 
 .zv-input.super {

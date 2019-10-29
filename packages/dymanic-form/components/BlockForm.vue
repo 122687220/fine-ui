@@ -71,7 +71,6 @@ export default create({
   },
   created() {
     this.initValue()
-    console.log(this)
     for (let item in this.schema) {
       console.log(
         this.schema[item].timeType &&

@@ -3,7 +3,7 @@
     min-width: 33.333%;
     order: 1;
     .el-form-item {
-      min-width: 280px;
+      min-width: $input-width;
       display: inline-block;
     }
   }
@@ -20,7 +20,7 @@
     order: 1;
 
     .el-form-item {
-      min-width: 280px;
+      min-width: $input-width;
       display: inline-block;
     }
   }
