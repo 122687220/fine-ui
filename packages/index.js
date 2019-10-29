@@ -29,9 +29,10 @@ import Table from './table'
 import TableFooter from './table-footer'
 import TableOperate from './table-operate'
 import Tabs from './tabs'
+import Tag from './tag'
 import Title from './title'
 import Upload from './upload'
-const version = '0.1.6'
+const version = '0.1.7'
 const components = [
   Alert,
   Button,
@@ -62,6 +63,7 @@ const components = [
   TableFooter,
   TableOperate,
   Tabs,
+  Tag,
   Title,
   Upload
 ]
@@ -106,6 +108,7 @@ export {
   TableFooter,
   TableOperate,
   Tabs,
+  Tag,
   Title,
   Upload
 }

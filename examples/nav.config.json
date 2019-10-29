@@ -49,6 +49,12 @@
           "path": "/button"
         },
         {
+          "desc": "标签",
+          "name": "tag",
+          "isMobile": "1",
+          "path": "/tag"
+        },
+        {
           "desc": "链接",
           "name": "link",
           "isMobile": "1",

@@ -3,7 +3,9 @@
     <div class="zv-title__left">
       <div>{{ title || localeLang.title || '标题' }}</div>
       <div class="zv-title__left-sub">
-        {{ subTitle || localeLang.subTitle || '副标题' }}
+        <slot name="subtitle">
+          {{ subTitle || localeLang.subTitle || '副标题' }}
+        </slot>
       </div>
     </div>
     <div class="zv-title__right">
