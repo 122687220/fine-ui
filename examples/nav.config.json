@@ -43,6 +43,12 @@
           "path": "/svg"
         },
         {
+          "desc": "布局组件",
+          "name": "rowcol",
+          "isMobile": "1",
+          "path": "/rowcol"
+        },
+        {
           "desc": "按钮",
           "name": "button",
           "isMobile": "1",

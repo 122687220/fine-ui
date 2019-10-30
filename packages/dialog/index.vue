@@ -15,11 +15,7 @@
     <div
       slot="footer"
       class="dialog-footer"
-      v-if="
-        btnList.length ||
-          ($slots.right && $slots.right[0]) ||
-          ($slots.left && $slots.left[0])
-      "
+      v-if="btnList.length || ($slots.right && $slots.right[0]) || ($slots.left && $slots.left[0])"
     >
       <slot name="left" />
       <zv-button

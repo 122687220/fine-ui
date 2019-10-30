@@ -1,12 +1,7 @@
 <template>
   <div class="zv-alert">
     <div>
-      <svg-icon
-        slot="suffix"
-        icon-class="info-circle"
-        class="zv-alert__svg"
-        :style="svgStyle"
-      />
+      <svg-icon slot="suffix" icon-class="info-circle" class="zv-alert__svg" :style="svgStyle" />
       <slot />
     </div>
     <slot name="right" />

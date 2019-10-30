@@ -4,6 +4,7 @@ import Alert from './alert'
 import Button from './button'
 import Cascader from './cascader'
 import Check from './check'
+import Col from './col'
 import Dialog from './dialog'
 import DialogFullscreen from './dialog-fullscreen'
 import DialogMiddle from './dialog-middle'
@@ -18,6 +19,7 @@ import LocaleProvider from './locale-provider'
 import Pagination from './pagination'
 import Progress from './progress'
 import Reconfirm from './reconfirm'
+import Row from './row'
 import Scroll from './scroll'
 import Search from './search'
 import Select from './select'
@@ -32,12 +34,13 @@ import Tabs from './tabs'
 import Tag from './tag'
 import Title from './title'
 import Upload from './upload'
-const version = '0.1.9'
+const version = '0.2.0'
 const components = [
   Alert,
   Button,
   Cascader,
   Check,
+  Col,
   Dialog,
   DialogFullscreen,
   DialogMiddle,
@@ -52,6 +55,7 @@ const components = [
   Pagination,
   Progress,
   Reconfirm,
+  Row,
   Scroll,
   Search,
   Select,
@@ -83,6 +87,7 @@ export {
   Button,
   Cascader,
   Check,
+  Col,
   Dialog,
   DialogFullscreen,
   DialogMiddle,
@@ -97,6 +102,7 @@ export {
   Pagination,
   Progress,
   Reconfirm,
+  Row,
   Scroll,
   Search,
   Select,

@@ -1,11 +1,7 @@
 <template>
   <div class="zv-button" @click="clickBtn">
     <el-button :style="buttonStyle" v-bind="$attrs">
-      <zv-svg-icon
-        class="zv-button__icon"
-        v-if="icon !== ''"
-        :icon-class="icon"
-      />
+      <zv-svg-icon class="zv-button__icon" v-if="icon !== ''" :icon-class="icon" />
       <slot />
     </el-button>
   </div>

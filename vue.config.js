@@ -29,9 +29,7 @@ module.exports = {
   },
   // 扩展 webpack 配置，使 packages 加入编译
   chainWebpack: config => {
-    config.resolve.alias
-      .set('@', resolve('examples'))
-      .set('@pc', resolve('examples/pc'))
+    config.resolve.alias.set('@', resolve('examples')).set('@pc', resolve('examples/pc'))
     config.module
       .rule('md')
       .test(/\.md/)
@@ -47,9 +45,7 @@ module.exports = {
             return '<table class="table">'
           }
           // ```html``` 给这种样式加个class hljs
-          MarkdownIt.renderer.rules.fence = utils.wrapCustomClass(
-            MarkdownIt.renderer.rules.fence
-          )
+          MarkdownIt.renderer.rules.fence = utils.wrapCustomClass(MarkdownIt.renderer.rules.fence)
           // ```code``` 给这种样式加个class code_inline
           const codeInline = MarkdownIt.renderer.rules.code_inline
           MarkdownIt.renderer.rules.code_inline = function(...args) {

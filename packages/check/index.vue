@@ -1,11 +1,7 @@
 <template>
   <div class="zv-select-check">
     <template v-if="checkType === 'checkbox'">
-      <el-checkbox-group
-        v-model="currentValue"
-        v-bind="$attrs"
-        v-on="$listeners"
-      >
+      <el-checkbox-group v-model="currentValue" v-bind="$attrs" v-on="$listeners">
         <el-checkbox
           v-for="(item, index) in checkItems"
           v-bind="item[labelName] ? item : {}"

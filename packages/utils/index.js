@@ -90,6 +90,23 @@ function findComponentUpward(context, componentName) {
   return parent
 }
 
+// 柯里化函数 调一个函数，但是不一次将所有参数传给它。这个函数会返回一个函数去接收下一个参数
+function curry(fn) {
+  // fn可以是任何参数的函数
+  const arity = fn.length
+  return function $curry(...args) {
+    if (args.length < arity) {
+      return $curry.bind(null, ...args)
+    }
+    return fn.call(null, ...args)
+  }
+}
+
+// 组合函数
+//接收一组函数，返回一个函数，不立即执行函数  组合函数， 将传递给他的函数从左到右组合。
+const compose = (...fns) => (...args) =>
+  fns.reduceRight((res, fn) => [fn.call(null, ...res)], args)[0]
+
 export {
   get,
   range,
@@ -100,5 +117,7 @@ export {
   isAndroid,
   deepCopy,
   typeOf,
-  findComponentUpward
+  findComponentUpward,
+  curry,
+  compose
 }
