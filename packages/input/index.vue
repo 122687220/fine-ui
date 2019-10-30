@@ -17,11 +17,7 @@
         <template slot="append" v-if="$slots.append">
           <slot name="append" />
         </template>
-        <svg-icon
-          slot="suffix"
-          @click.native="handleClick"
-          :icon-class="icon"
-        />
+        <svg-icon slot="suffix" @click.native="handleClick" :icon-class="icon" />
       </el-input>
     </div>
     <div>

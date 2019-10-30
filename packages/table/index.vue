@@ -104,14 +104,7 @@ export default create({
     }
   },
   render(h) { // eslint-disable-line
-    const {
-      tableData,
-      tableMaxHeight,
-      handleSelect,
-      rowDisabledStyle,
-      params,
-      selectInit
-    } = this
+    const { tableData, tableMaxHeight, handleSelect, rowDisabledStyle, params, selectInit } = this
 
     // 是否需要多选列表的情况
     const checkComponent = params.haveCheckBox ? (

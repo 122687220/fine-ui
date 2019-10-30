@@ -1,10 +1,7 @@
 <template>
   <div class="zv-table__operate">
     <template v-if="params.length">
-      <zv-link
-        :type="params[0].type || 'primary'"
-        @click="commandHanlder(params[0].command)"
-      >
+      <zv-link :type="params[0].type || 'primary'" @click="commandHanlder(params[0].command)">
         {{ params[0].name }}
       </zv-link>
       <zv-dropdown

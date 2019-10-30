@@ -48,20 +48,14 @@
       bodyHeight="600px"
       width="600px"
       :btn-list="[]"
-      :title="
-        exampleDescription || localeLang.exampleDescription || '示例描述的部分'
-      "
+      :title="exampleDescription || localeLang.exampleDescription || '示例描述的部分'"
       append-to-body
     >
       <slot name="exampleImgSlot">
         <img
           width="100%"
           :src="exampleImgSrc"
-          :alt="
-            localeLang.exampleImage ||
-              localeLang.exampleDescription ||
-              '示例图片'
-          "
+          :alt="localeLang.exampleImage || localeLang.exampleDescription || '示例图片'"
         />
       </slot>
     </zv-dialog>

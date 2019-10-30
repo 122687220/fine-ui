@@ -1,10 +1,5 @@
 <template>
-  <el-scrollbar
-    class="zv-scrollbar"
-    :style="style"
-    v-bind="$attrs"
-    v-on="$listeners"
-  >
+  <el-scrollbar class="zv-scrollbar" :style="style" v-bind="$attrs" v-on="$listeners">
     <slot />
   </el-scrollbar>
 </template>

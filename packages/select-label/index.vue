@@ -8,12 +8,7 @@
         {{ title }}
       </div>
 
-      <component
-        v-model="currentValue"
-        :is="componentName"
-        v-bind="$attrs"
-        v-on="$listeners"
-      />
+      <component v-model="currentValue" :is="componentName" v-bind="$attrs" v-on="$listeners" />
     </div>
   </div>
 </template>

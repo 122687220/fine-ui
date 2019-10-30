@@ -1,22 +1,3 @@
-<template>
-  <el-dropdown class="zv-dropdown" v-bind="$attrs" v-on="$listeners">
-    <div>
-      <slot>
-        <span>{{ localeLang.default || '点击触发下拉框' }}</span>
-      </slot>
-    </div>
-    <el-dropdown-menu slot="dropdown" v-if="itemLists.length">
-      <el-dropdown-item
-        v-for="(item, index) in itemLists"
-        :key="index"
-        v-bind="item.name ? item : {}"
-      >
-        {{ item.name ? item.name : item }}
-      </el-dropdown-item>
-    </el-dropdown-menu>
-  </el-dropdown>
-</template>
-
 <script>
 import create from '../utils/create-basic'
 import langMixins from '../mixins/langMixins'
@@ -31,12 +12,40 @@ export default create({
       default() {
         return []
       }
+    },
+    itemRender: {
+      type: Function
     }
   },
-  computed: {
-    localeLang() {
-      return lang[this.localLocale] || {}
+  render(h) {  // eslint-disable-line
+    const { $attrs, $listeners, localLocale, $slots, itemLists, itemRender } = this
+    const localeLang = lang[localLocale] || {}
+    let dropDownItem = null
+
+    const $slotsDefault = $slots.default.length ? (
+      <div>{$slots.default}</div>
+    ) : (
+      <span>{localeLang.default || '点击触发下拉框'}</span>
+    )
+
+    if (itemLists.length) {
+      dropDownItem = (
+        <ElDropdownMenu slot="dropdown">
+          {itemLists.map((item, index) => (
+            <ElDropdownItem key={index} {...{ attrs: item || {} }}>
+              {itemRender ? itemRender(item) : item.name ? item.name : item}
+            </ElDropdownItem>
+          ))}
+        </ElDropdownMenu>
+      )
     }
+
+    return (
+      <ElDropdown class="zv-dropdown" {...{ attrs: $attrs, listeners: $listeners }}>
+        {$slotsDefault}
+        {dropDownItem}
+      </ElDropdown>
+    )
   }
 })
 </script>

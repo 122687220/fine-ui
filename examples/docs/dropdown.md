@@ -35,24 +35,36 @@
         hahha
       </zv-dropdown>
     </div>
+          <zv-dropdown :item-lists="itemLists2" :item-render="renderItme">
+        hahha3
+      </zv-dropdown>
   </div>
 </template>
 ```
 ```js
 <script>
-import create from '../utils/create-basic'
-export default create({
-  name: 'Dropdown',
-  props: {
-    itemLists: {
-      type: Array,
-      default() {
-        return []
-      }
+export default {
+  name: 'DropdownDemo',
+  data() {
+    return {
+      itemLists1: [
+        {
+          name: 'a'
+        },
+        {
+          name: 'b'
+        },
+        { name: 'c' }
+      ],
+      itemLists2: [1, 2, 3]
+    }
+  },
+  methods: {
+    renderItme(item) {
+      return <ZvButton>{item}</ZvButton>
     }
   }
-})
-</script>
+}
 ```
 :::
 
@@ -62,7 +74,8 @@ export default create({
 
 | 参数      | 说明                                   | 类型     | 可选值 | 默认值    |
 | --------- | -------------------------------------- | -------- | ------ | --------- |
-| `item-lists` | `下拉菜单的内容list`     | `Array` | - | - |
+| `itemLists` | `下拉菜单的内容list`     | `Array` | - | - |
+| `itemRender` | `下拉菜单的渲染函数`     | `Function` | - | - |
 | Attributes和element-ui中的dropdown一样 |
 
 ## methods
