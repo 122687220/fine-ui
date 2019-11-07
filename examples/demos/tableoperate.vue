@@ -1,10 +1,6 @@
 <template>
   <div>
-    <zv-table-operate
-      trigger="click"
-      :params="itemLists1"
-      @command="commandHandler"
-    />
+    <zv-table-operate trigger="click" :params="itemLists1" @command="commandHandler" />
   </div>
 </template>
 
@@ -31,7 +27,7 @@ export default {
   },
   methods: {
     commandHandler(item) {
-      console.log(item)
+      console.log(1, item)
     }
   }
 }

@@ -17,8 +17,13 @@ export default create({
       type: Function
     }
   },
+  methods: {
+    commandHandler(command) {
+      this.$emit('command', command)
+    }
+  },
   render(h) {  // eslint-disable-line
-    const { $attrs, $listeners, localLocale, $slots, itemLists, itemRender } = this
+    const { $attrs, $listeners, localLocale, $slots, itemLists, itemRender, commandHandler } = this
     const localeLang = lang[localLocale] || {}
     let dropDownItem = null
 
@@ -41,7 +46,11 @@ export default create({
     }
 
     return (
-      <ElDropdown class="zv-dropdown" {...{ attrs: $attrs, listeners: $listeners }}>
+      <ElDropdown
+        class="zv-dropdown"
+        onCommand={commandHandler}
+        {...{ attrs: $attrs, listeners: $listeners }}
+      >
         {$slotsDefault}
         {dropDownItem}
       </ElDropdown>

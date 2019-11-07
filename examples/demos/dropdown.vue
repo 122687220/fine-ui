@@ -1,7 +1,7 @@
 <template>
   <div>
     <div>
-      <zv-dropdown :item-lists="itemLists1" trigger="click">
+      <zv-dropdown :item-lists="itemLists1" trigger="click" @command="handlerCommand">
         hahha
       </zv-dropdown>
     </div>
@@ -27,12 +27,14 @@ export default {
     return {
       itemLists1: [
         {
-          name: 'a'
+          name: 'a',
+          command: 'a'
         },
         {
-          name: 'b'
+          name: 'b',
+          command: 'b'
         },
-        { name: 'c' }
+        { name: 'c', command: 'c' }
       ],
       itemLists2: [1, 2, 3]
     }
@@ -40,6 +42,9 @@ export default {
   methods: {
     renderItme(item) {
       return <ZvButton>{item}</ZvButton>
+    },
+    handlerCommand(command) {
+      console.log(command)
     }
   }
 }
