@@ -71,10 +71,10 @@ export default create({
      * @date 2019/8/5
      * @description 切换表格的选择
      */
-    toggleSelection(rows) {
+    toggleSelection(rows, selected) {
       if (rows) {
         rows.forEach(row => {
-          this.$refs.multipleTable.toggleRowSelection(row)
+          this.$refs.multipleTable.toggleRowSelection(row, selected)
         })
       } else {
         this.$refs.multipleTable.clearSelection()

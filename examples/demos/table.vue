@@ -4,13 +4,11 @@
       <zv-button @click="changeTableSelectState">
         切换某几行的勾选状态
       </zv-button>
+      <zv-button @click="clearTableSelectState">
+        333
+      </zv-button>
     </div>
-    <zv-table
-      ref="myTable"
-      :tableData="tableData"
-      :params="tableParam"
-      @select="handleSelect"
-    />
+    <zv-table ref="myTable" :tableData="tableData" :params="tableParam" @select="handleSelect" />
     <zv-table
       ref="myTable"
       style="margin-top: 60px;"
@@ -51,11 +49,7 @@ export default {
             render: {
               default: ({ row }) => {
                 const { status = '0' } = row
-                return (
-                  <span>
-                    {['亮仔', '大宝贝', '约吗', '约吗', '约吗'][status]}
-                  </span>
-                )
+                return <span>{['亮仔', '大宝贝', '约吗', '约吗', '约吗'][status]}</span>
               }
             }
           },
@@ -75,9 +69,7 @@ export default {
                 return <span>ddd</span>
               },
               // 自定义列表内容区域
-              default: ({ row }) => (
-                <zv-button onClick={() => self.click(row)}>dddd</zv-button>
-              )
+              default: ({ row }) => <zv-button onClick={() => self.click(row)}>dddd</zv-button>
             }
           }
         ]
@@ -94,11 +86,7 @@ export default {
             render: {
               default: ({ row }) => {
                 const { status = '0' } = row
-                return (
-                  <span>
-                    {['亮仔', '大宝贝', '约吗', '约吗', '约吗'][status]}
-                  </span>
-                )
+                return <span>{['亮仔', '大宝贝', '约吗', '约吗', '约吗'][status]}</span>
               }
             }
           },
@@ -216,7 +204,7 @@ export default {
   },
   methods: {
     changeTableSelectState() {
-      this.$refs.myTable.toggleSelection([this.tableData[0]])
+      this.$refs.myTable.toggleSelection([this.tableData])
     },
     currentChange(val) {
       console.log(val)
@@ -229,6 +217,9 @@ export default {
     },
     commandHandler(item, row) {
       console.log(item, row)
+    },
+    clearTableSelectState() {
+      this.$refs.myTable.toggleSelection()
     }
   }
 }
