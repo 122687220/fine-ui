@@ -74,7 +74,11 @@ export default create({
     toggleSelection(rows, selected) {
       if (rows) {
         rows.forEach(row => {
-          this.$refs.multipleTable.toggleRowSelection(row, selected)
+          if (Object.prototype.toString.call(selected) === '[object Function]') {
+            this.$refs.multipleTable.toggleRowSelection(row, selected(row))
+          } else {
+            this.$refs.multipleTable.toggleRowSelection(row, selected)
+          }
         })
       } else {
         this.$refs.multipleTable.clearSelection()

@@ -10,7 +10,7 @@
         v-bind="$attrs"
         v-on="$listeners"
       >
-        <zv-link type="primary">{{ localeLang.more }}</zv-link>
+        <zv-link type="primary">{{ localeLang.more || '更多操作' }}</zv-link>
       </zv-dropdown>
     </template>
   </div>

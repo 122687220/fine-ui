@@ -10,12 +10,7 @@
         </div>
       </template>
     </div>
-    <pagination
-      :page-sizes="pageSizes"
-      :layout="layout"
-      v-bind="$attrs"
-      v-on="$listeners"
-    />
+    <pagination :page-sizes="pageSizes" :layout="layout" v-bind="$attrs" v-on="$listeners" />
   </div>
 </template>
 
