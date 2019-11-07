@@ -4,6 +4,10 @@
 .zv-table {
   position: relative;
 
+  .el-table {
+    color: $base-font-color;
+  }
+
   /deep/ .el-table-column--selection .cell {
     width: 60px;
     padding-left: 20px;
