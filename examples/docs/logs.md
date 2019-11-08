@@ -2,6 +2,23 @@
 
 <!-- {.md} -->
 
+## [v0.3.6]
+
+<!-- {.md} -->
+
+2019-11-8
+
+<!-- {.md} -->
+
+### [add]
+dymanic-form组件新增 ZvEmptyBlock子项
+
+scss 中新配置两个可配置变量 动态表格的宽度($dymanic-form-item) 弹窗情况动态表格的宽度($dialog-dymanic-form-item)
+
+<!-- {.md} -->
+
+<!-- {.md} -->
+
 ## [v0.3.5]
 
 <!-- {.md} -->

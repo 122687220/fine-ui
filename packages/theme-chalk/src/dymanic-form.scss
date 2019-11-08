@@ -2,7 +2,7 @@
 
 .zv-dymanic__form {
   .zv-dymanic-form__item {
-    min-width: 33.333%;
+    min-width: $dymanic-form-item;
     order: 1;
     .el-form-item {
       min-width: $input-width;
@@ -18,7 +18,7 @@
 
 .zv-dymanic-dialog__form {
   .zv-dymanic-form__item {
-    min-width: 50%;
+    min-width: $dialog-dymanic-form-item;
     order: 1;
 
     .el-form-item {

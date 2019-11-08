@@ -34,6 +34,7 @@
           v-bind="item"
           @change="handleChange(item)"
         />
+        <div v-bind="item" v-if="item.componentName === 'ZvEmptyBlock'"></div>
       </zv-form-item>
     </template>
     <slot />
@@ -87,6 +88,7 @@ export default create({
     initValue() {
       for (const key in this.schema) {
         // 循环将所有的值都设置为可响应的  后续可设置为嵌套递归的方式
+        if (this.schema[key].componentName === 'ZvEmptyBlock') continue
         this.setValueKey(this, this.currentValue, key)
       }
     },

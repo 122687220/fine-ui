@@ -212,6 +212,9 @@ export default {
           isRequired: true,
           title: '机型9'
         },
+        empty: {
+          componentName: 'ZvEmptyBlock'
+        },
         email: {
           componentName: 'ZvInput',
           label: '邮箱',

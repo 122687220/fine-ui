@@ -325,7 +325,7 @@ export default {
 | 参数      | 说明                                   | 类型     | 可选值 | 默认值    |
 | --------- | -------------------------------------- | -------- | ------ | --------- |
 | `key`      | `每个键值都表示对应的数据name`                                 | - | -      | -         |
-| `componentName`      | `渲染的组件名称(ZvSelectLabel下componentType字段必填)`                                 | `string` | -      | -         |
+| `componentName`      | `渲染的组件名称(ZvSelectLabel下componentType字段必填)  ZvEmptyBlock(表示占据一个空的内容)`                                 | `string` | -      | -         |
 | `componentType`      | `ZvSelectLabel下生效`                                 | `string` | -      | -         |
 | `rules`      | `想要自己添加的表单校验规则`                                 | `Array` | -      | -         |
 | `validator`      | `内置的表单校验规则(身份证校验,邮箱校验,数字校验,手机和座机校验,是否必填项校验,链接地址校验,数字输入范围校验, 字符串长短校验)`                                 | `Array` | -      | -         |
