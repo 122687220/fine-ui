@@ -23,6 +23,14 @@
     width: 100%;
   }
 
+  .zv-table_container-hidden {
+    .zv-table_header-class {
+      .el-checkbox__input {
+        display: none;
+      }
+    }
+  }
+
   th {
     padding: 0;
     height: 44px;

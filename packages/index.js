@@ -34,7 +34,7 @@ import Tabs from './tabs'
 import Tag from './tag'
 import Title from './title'
 import Upload from './upload'
-const version = '0.3.3'
+const version = '0.3.4'
 const components = [
   Alert,
   Button,

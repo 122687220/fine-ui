@@ -3,6 +3,10 @@ import create from '../utils/create-basic'
 export default create({
   name: 'Table',
   props: {
+    disableSelectAll: {
+      type: Boolean,
+      default: false
+    },
     tableData: {
       type: Array,
       default() {
@@ -69,6 +73,14 @@ export default create({
     /**
      * @author 肖景
      * @date 2019/8/5
+     * @description 勾选表格数改变触发的函数
+     */
+    handleSelectChange(val) {
+      this.$emit('select-change', val)
+    },
+    /**
+     * @author 肖景
+     * @date 2019/8/5
      * @description 切换表格的选择
      */
     toggleSelection(rows, selected) {
@@ -105,10 +117,28 @@ export default create({
         return this.params.disabledFunction(row)
       }
       return !row.isDisabled
+    },
+    /**
+     * @author 肖景
+     * @date 2019/11/8
+     * @description 表格行内点击
+     */
+    handleRowClick(row, column, event) {
+      this.$emit('row-click', row, column, event)
     }
   },
   render(h) { // eslint-disable-line
-    const { tableData, tableMaxHeight, handleSelect, rowDisabledStyle, params, selectInit } = this
+    const {
+      tableData,
+      tableMaxHeight,
+      handleSelect,
+      rowDisabledStyle,
+      params,
+      selectInit,
+      handleRowClick,
+      disableSelectAll,
+      handleSelectChange
+    } = this
 
     // 是否需要多选列表的情况
     const checkComponent = params.haveCheckBox ? (
@@ -164,13 +194,15 @@ export default create({
     // 最终的渲染函数
     return (
       <div class="zv-table">
-        <div class="zv-table_container">
+        <div class={['zv-table_container', disableSelectAll ? 'zv-table_container-hidden' : '']}>
           <el-table
             ref="multipleTable"
             data={tableData}
             width="100%"
             onSelect={handleSelect}
             onSelect-all={handleSelect}
+            onSelection-change={handleSelectChange}
+            onRow-click={handleRowClick}
             rowClassName={rowDisabledStyle}
             headerRowClassName="zv-table_header-class"
             height={params.height ? params.height : params.maxHeight}

@@ -8,12 +8,21 @@
         333
       </zv-button>
     </div>
-    <zv-table ref="myTable" :tableData="tableData" :params="tableParam" @select="handleSelect" />
+    <zv-table
+      ref="myTable"
+      :tableData="tableData"
+      :params="tableParam"
+      @select="handleSelect"
+      disable-select-all
+    />
     <zv-table
       ref="myTable"
       style="margin-top: 60px;"
+      class="test"
       :tableData="tableData"
       :params="tableParam1"
+      @row-click="handleRowClick"
+      @select-change="selectChange"
       @select="handleSelect"
     />
   </div>
@@ -209,8 +218,14 @@ export default {
     currentChange(val) {
       console.log(val)
     },
-    handleSelect(val) {
-      console.log('所选择的数据为：' + val)
+    handleSelect(res) {
+      console.log('所选择的数据为：' + res)
+    },
+    handleRowClick(row, colunm, eventType) {
+      console.log('所选择的数据为：', row, colunm, eventType)
+    },
+    selectChange(val) {
+      console.log('所选择的数据改变后为：' + val)
     },
     click(row) {
       console.log(row)
@@ -225,4 +240,4 @@ export default {
 }
 </script>
 
-<style scoped></style>
+<style lang="scss"></style>
