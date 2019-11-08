@@ -20,6 +20,8 @@
           :icon="item.icon || ''"
           :width-type="item.widthType || 'default'"
           v-bind="item"
+          @clickIcon="iconfunction(item)"
+          @change="handleChange(item)"
         />
         <zv-select-label
           v-model="currentValue[index]"
@@ -30,6 +32,7 @@
           :is-required="!!item.isRequired"
           :component-name="item.componentType || 'Select'"
           v-bind="item"
+          @change="handleChange(item)"
         />
       </zv-form-item>
     </template>
@@ -40,6 +43,7 @@
 <script>
 import create from '../../utils/create-basic'
 import ZvModel from '../../mixins/zv-model'
+import { dispatch } from '../../mixins/emitter'
 import ZvForm from '../../form/index'
 import ZvFormItem from '../../form-item/index'
 import ZvSelectLabel from '../../select-label/index'
@@ -71,14 +75,15 @@ export default create({
   },
   created() {
     this.initValue()
-    for (let item in this.schema) {
-      console.log(
-        this.schema[item].timeType &&
-          this.schema[item].timeType.includes('range')
-      )
-    }
   },
   methods: {
+    dispatch,
+    handleChange(item) {
+      this.dispatch('ZvDymanicForm', 'change', item)
+    },
+    iconfunction(item) {
+      this.dispatch('ZvDymanicForm', 'clickIcon', item)
+    },
     initValue() {
       for (const key in this.schema) {
         // 循环将所有的值都设置为可响应的  后续可设置为嵌套递归的方式

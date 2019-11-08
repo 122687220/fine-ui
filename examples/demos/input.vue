@@ -1,12 +1,7 @@
 <template>
   <div class="example-input">
     <example-wrapper class="lists">
-      <zv-input
-        label="登录密码"
-        placeholder="请输入您的登录密码"
-        textRight
-        v-model="name1"
-      />
+      <zv-input label="登录密码" placeholder="请输入您的登录密码" textRight v-model="name1" />
     </example-wrapper>
     <example-wrapper class="lists">
       <zv-input
@@ -18,12 +13,7 @@
       />
     </example-wrapper>
     <example-wrapper class="lists">
-      <zv-input
-        label="登录密码"
-        placeholder="请输入您的登录密码"
-        labelTop
-        v-model="name3"
-      />
+      <zv-input label="登录密码" placeholder="请输入您的登录密码" labelTop v-model="name3" />
     </example-wrapper>
 
     <example-wrapper class="lists">
@@ -33,6 +23,19 @@
         type="textarea"
         labelTop
         v-model="name3"
+      />
+    </example-wrapper>
+
+    <example-wrapper class="lists">
+      <zv-input
+        label="登录密码388383"
+        placeholder="请输入您的登录密码"
+        labelTop
+        readonly
+        showBorder
+        v-model="name10"
+        icon="baojing"
+        @clickIcon="clickIcon"
       />
     </example-wrapper>
 
@@ -103,7 +106,8 @@ export default {
       name1: '',
       name2: '',
       name3: '',
-      name4: ''
+      name4: '',
+      name10: 10
     }
   },
   methods: {
@@ -112,6 +116,9 @@ export default {
         message: '332',
         type: 'warning'
       })
+    },
+    clickIcon() {
+      console.log('33')
     }
   }
 }

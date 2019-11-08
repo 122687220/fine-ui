@@ -84,6 +84,11 @@
   .el-input__inner {
     color: #999;
   }
+  .dark {
+    .el-input__inner {
+      color: $base-font-color;
+    }
+  }
 }
 
 .zv-input--right {

@@ -2,6 +2,23 @@
 
 <!-- {.md} -->
 
+## [v0.3.5]
+
+<!-- {.md} -->
+
+2019-11-8
+
+<!-- {.md} -->
+
+### [add]
+zv-input 组件新增 reanonly相关交互
+
+dymanic-form组件新增 iconClick事件
+
+dymanic-form组件新增 change事件
+
+<!-- {.md} -->
+
 ## [v0.3.4]
 
 <!-- {.md} -->
@@ -12,7 +29,9 @@
 
 ### [add]
 table组件的添加属性 disableSelectAll(是否取消表头的全选按钮)
+
 table组件的添加事件 select-change(当前选择改变时触发的事件)
+
 table组件的添加事件 row-click(当前行被点击的事件)
 
 <!-- {.md} -->

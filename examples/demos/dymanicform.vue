@@ -8,6 +8,7 @@
       type="block"
       v-model="value1"
       :schema="schema1"
+      @clickIcon="clickIcon"
       :style="{
         justifyContent: 'flex-start'
       }"
@@ -121,6 +122,7 @@ export default {
           placeholder: '请输入您的网址',
           labelTop: true,
           widthType: 'default',
+          icon: 'baojing',
           required: true,
           showBorder: true,
           validator: [
@@ -277,6 +279,9 @@ export default {
       this.$refs['dymanicForm'].validate().then(res => {
         console.log(res)
       })
+    },
+    clickIcon(item) {
+      console.log(item)
     },
     reset() {
       this.$refs['dymanicForm'].resetFields()

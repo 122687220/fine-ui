@@ -12,7 +12,10 @@
     ]"
   >
     <div class="zv-input__label" v-if="label">{{ label }}</div>
-    <div class="zv-input__content">
+    <div
+      class="zv-input__content"
+      :class="[currentValue && ($attrs.readonly === '' || $attrs.readonly) ? 'dark' : '']"
+    >
       <el-input v-bind="$attrs" v-model="currentValue" v-on="$listeners">
         <template slot="append" v-if="$slots.append">
           <slot name="append" />
