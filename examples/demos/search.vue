@@ -5,6 +5,10 @@
     </div>
 
     <div class="list">
+      <zv-search v-model="searchValue" clearable />
+    </div>
+
+    <div class="list">
       <zv-search showBtn />
     </div>
   </div>
@@ -12,7 +16,12 @@
 
 <script>
 export default {
-  name: 'SearchDemo'
+  name: 'SearchDemo',
+  data() {
+    return {
+      searchValue: ''
+    }
+  }
 }
 </script>
 

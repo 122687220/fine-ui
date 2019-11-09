@@ -5,6 +5,7 @@
       v-model="currentValue"
       @blur="onBlur"
       @keyup.enter.native="onKeyupEnter"
+      v-bind="$attrs"
     >
       <i slot="prefix" class="el-input__icon el-icon-search"></i>
     </el-input>
