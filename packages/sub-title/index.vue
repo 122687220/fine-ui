@@ -1,6 +1,6 @@
 <template>
   <div class="zv-sub-title">
-    <span>
+    <span class="zv-sub-title__main">
       <slot>{{ localeLang.default || '二级标题' }}</slot>
     </span>
   </div>

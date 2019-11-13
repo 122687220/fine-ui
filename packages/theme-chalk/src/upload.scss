@@ -12,6 +12,10 @@
     line-height: 100px;
     border-radius: 4px;
     border: dashed 1px #e0e0e0;
+    i {
+      position: relative;
+      top: 5px;
+    }
   }
 
   .el-upload-list--picture-card {

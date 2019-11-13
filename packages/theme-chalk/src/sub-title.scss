@@ -3,7 +3,7 @@
 
 .zv-sub-title {
   @include containerH44();
-  span {
+  &__main {
     border-left: 4px solid $base-color;
     padding-left: 12px;
     display: block;

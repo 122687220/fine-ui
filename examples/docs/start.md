@@ -97,6 +97,28 @@ import { ZvButton } from 'ZvUI'
 Vue.use(ZvButton)
 ```
 
+```js
+// babel.config.js
+
+module.exports = {
+  presets: ['@vue/app'],
+  plugins: [
+    [
+      'import',
+      {
+        libraryName: '@zvalley/zv-ui__pc',
+        libraryDirectory: 'packages',
+        style: name => {
+          const newName = name.replace('packages', 'packages/theme-chalk/lib')
+          return `${newName}.css`
+        }
+      },
+      'zv-ui__pc'
+    ]
+  ]
+}
+```
+
 <!-- {.md} -->
 
 在模板中，用<!-- {.md} --> `<zv-button></zv-button>` 自定义标签的方式使用组件

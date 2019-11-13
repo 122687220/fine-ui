@@ -25,6 +25,16 @@
       "desc": "开发指南"
     },
     {
+      "name": "theme",
+      "path": "/theme",
+      "desc": "定制主题"
+    }, 
+    {
+      "name": "lang",
+      "path": "/lang",
+      "desc": "国际化"
+    },
+    {
       "name": "index",
       "isMobile": "1",
       "path": "/index",
