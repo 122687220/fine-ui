@@ -20,6 +20,7 @@
       style="margin-top: 60px;"
       class="test"
       :tableData="tableData"
+      empty-slot="--"
       :params="tableParam1"
       @row-click="handleRowClick"
       @select-change="selectChange"
@@ -126,6 +127,7 @@ export default {
                   trigger="click"
                   params={self.itemLists1}
                   onCommand={command => self.commandHandler(command, row)}
+                  item-render={self.itemRender(row)}
                 />
               )
             }
@@ -235,6 +237,16 @@ export default {
     },
     clearTableSelectState() {
       this.$refs.myTable.toggleSelection()
+    },
+    itemRender(row) {
+      return function(operateItem) {
+        console.log(operateItem)
+        if (row.status === '4') {
+          return 'dddd'
+        } else {
+          return '333'
+        }
+      }
     }
   }
 }

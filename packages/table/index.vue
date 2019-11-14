@@ -13,6 +13,10 @@ export default create({
         return []
       }
     },
+    emptySlot: {
+      type: String,
+      default: ''
+    },
     params: {
       type: Object,
       default() {
@@ -137,7 +141,8 @@ export default create({
       selectInit,
       handleRowClick,
       disableSelectAll,
-      handleSelectChange
+      handleSelectChange,
+      emptySlot
     } = this
 
     // 是否需要多选列表的情况
@@ -163,7 +168,7 @@ export default create({
         render || {
           default: ({ row }) => (
             <span class="zv-table_cell-content">
-              {row[prop] && row[prop].name ? row[prop].name : row[prop]}
+              {row[prop] && row[prop].name ? row[prop].name : row[prop] || emptySlot}
             </span>
           )
         }

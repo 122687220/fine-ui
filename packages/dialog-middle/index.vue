@@ -52,9 +52,10 @@ export default create({
     }
     if (needAddUnit) {
       eleNode = {
-        clientWidth: eleNode.clientWidth > clientWidth ? clientWidth - 80 : eleNode.clientWidth,
+        clientWidth:
+          eleNode.clientWidth > clientWidth ? clientWidth - 80 : eleNode.clientWidth - 32,
         clientHeight:
-          eleNode.clientHeight > clientHeight ? clientHeight - 104 : eleNode.clientHeight
+          eleNode.clientHeight > clientHeight ? clientHeight - 104 : eleNode.clientHeight - 16
       }
     }
     this.eleStyle = {

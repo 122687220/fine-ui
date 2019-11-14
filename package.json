@@ -1,6 +1,6 @@
 {
   "name": "@zvalley/zv-ui__pc",
-  "version": "0.3.8",
+  "version": "0.3.9",
   "description": "中科云谷产品部电脑端端组件库",
   "main": "lib/zv-ui__pc.common.js",
   "style": "lib/theme-chalk/index.css",

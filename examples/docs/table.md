@@ -28,18 +28,26 @@
       <zv-button @click="changeTableSelectState">
         切换某几行的勾选状态
       </zv-button>
+      <zv-button @click="clearTableSelectState">
+        333
+      </zv-button>
     </div>
     <zv-table
       ref="myTable"
       :tableData="tableData"
       :params="tableParam"
       @select="handleSelect"
+      disable-select-all
     />
     <zv-table
       ref="myTable"
       style="margin-top: 60px;"
+      class="test"
       :tableData="tableData"
+      empty-slot="--"
       :params="tableParam1"
+      @row-click="handleRowClick"
+      @select-change="selectChange"
       @select="handleSelect"
     />
   </div>
@@ -52,27 +60,35 @@ export default {
   data() {
     const self = this
     return {
+      itemLists1: [
+        {
+          name: '编辑',
+          command: 'a'
+        },
+        {
+          name: 'b',
+          command: 'b'
+        },
+        {
+          name: 'c',
+          command: 'c'
+        }
+      ],
       tableParam: {
-        isCheckAll: false,
         haveCheckBox: true,
         height: 300,
         columns: [
           {
             prop: 'status',
             label: '状态',
-            width: `200px`,
             render: {
               default: ({ row }) => {
                 const { status = '0' } = row
-                return (
-                  <span>
-                    {['亮仔', '大宝贝', '约吗', '约吗', '约吗'][status]}
-                  </span>
-                )
+                return <span>{['亮仔', '大宝贝', '约吗', '约吗', '约吗'][status]}</span>
               }
             }
           },
-          { prop: 'name', label: '名称', width: `200px` },
+          { prop: 'name', label: '名称' },
           { prop: 'address', label: '地址', width: `200px`, align: 'center' },
           { prop: 'content', label: '内容', width: `200px`, sortable: true },
           { prop: 'date', label: '日期', width: `200px` },
@@ -82,9 +98,13 @@ export default {
             label: '操作',
             align: 'right',
             render: {
-              default: ({ row }) => (
-                <zv-button onClick={() => self.click(row)}>dddd</zv-button>
-              )
+              // 自定义列表表头
+              header: ({ column }) => {
+                console.log(column)
+                return <span>ddd</span>
+              },
+              // 自定义列表内容区域
+              default: ({ row }) => <zv-button onClick={() => self.click(row)}>dddd</zv-button>
             }
           }
         ]
@@ -101,11 +121,7 @@ export default {
             render: {
               default: ({ row }) => {
                 const { status = '0' } = row
-                return (
-                  <span>
-                    {['亮仔', '大宝贝', '约吗', '约吗', '约吗'][status]}
-                  </span>
-                )
+                return <span>{['亮仔', '大宝贝', '约吗', '约吗', '约吗'][status]}</span>
               }
             }
           },
@@ -113,23 +129,32 @@ export default {
           { prop: 'address', label: '地址', width: `200px`, align: 'center' },
           { prop: 'content', label: '内容', width: `200px`, sortable: true },
           { prop: 'date', label: '日期', width: `200px` },
-          {
-            prop: 'count',
-            label: '金额',
-            align: 'center',
-            columns: [
-              { prop: 'count1', label: '日金额' },
-              { prop: 'count2', label: '周金额' },
-              { prop: 'count3', label: '月金额' }
-            ]
-          },
+          // {
+          //   prop: 'count',
+          //   label: '金额',
+          //   align: 'center',
+          //   columns: [
+          //     { prop: 'count1', label: '日金额' },
+          //     { prop: 'count2', label: '周金额' },
+          //     { prop: 'count3', label: '月金额' }
+          //   ]
+          // },
           {
             prop: 'operate',
             label: '操作',
-            align: 'right',
+            align: 'center',
             fixed: 'right',
+            width: '160px',
+            showOverflowTooltip: '0',
             render: function({ row }) {
-              return <zv-button onClick={() => self.click(row)}>dddd</zv-button>
+              return (
+                <zv-table-operate
+                  trigger="click"
+                  params={self.itemLists1}
+                  onCommand={command => self.commandHandler(command, row)}
+                  item-render={self.itemRender(row)}
+                />
+              )
             }
           }
         ]
@@ -215,16 +240,38 @@ export default {
   },
   methods: {
     changeTableSelectState() {
-      this.$refs.myTable.toggleSelection([this.tableData[0]])
+      this.$refs.myTable.toggleSelection([this.tableData])
     },
     currentChange(val) {
       console.log(val)
     },
-    handleSelect(val) {
-      console.log('所选择的数据为：' + val)
+    handleSelect(res) {
+      console.log('所选择的数据为：' + res)
+    },
+    handleRowClick(row, colunm, eventType) {
+      console.log('所选择的数据为：', row, colunm, eventType)
+    },
+    selectChange(val) {
+      console.log('所选择的数据改变后为：' + val)
     },
     click(row) {
       console.log(row)
+    },
+    commandHandler(item, row) {
+      console.log(item, row)
+    },
+    clearTableSelectState() {
+      this.$refs.myTable.toggleSelection()
+    },
+    itemRender(row) {
+      return function(operateItem) {
+        console.log(operateItem)
+        if (row.status === '4') {
+          return 'dddd'
+        } else {
+          return '333'
+        }
+      }
     }
   }
 }
@@ -241,6 +288,7 @@ export default {
 | `tableData`      | `表格数据`                                 | `Array` | -      | []         |
 | `params`      | `表格配置项`                                 | `String` | -      | -         |
 | `disableSelectAll`      | `是否取消表头的全选按钮`                                 | `Boolean` | `false | true`      | `false`         |
+| `empty-slot`      | `该列没有数据时的表现形式`                                 | `String` | ``      | ``         |
 
 ## params详细说明
 
