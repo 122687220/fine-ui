@@ -28,6 +28,21 @@
 
     <example-wrapper class="lists">
       <zv-input
+        label="登录密码0323423432"
+        placeholder="请输入您的登录密码"
+        labelTop
+        readonly
+        showBorder
+        required
+        v-model="name20"
+        icon="baojing"
+        @clickIcon="clickIcon"
+        class="dark"
+      />
+    </example-wrapper>
+
+    <example-wrapper class="lists">
+      <zv-input
         label="登录密码388383"
         placeholder="请输入您的登录密码"
         labelTop
@@ -107,7 +122,8 @@ export default {
       name2: '',
       name3: '',
       name4: '',
-      name10: 10
+      name10: 10,
+      name20: ''
     }
   },
   methods: {
@@ -128,5 +144,11 @@ export default {
 .example-input {
   margin-left: 40px;
   width: 600px;
+}
+</style>
+
+<style>
+.dark .zv-svg-icon {
+  color: #212121;
 }
 </style>

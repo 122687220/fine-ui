@@ -3,4 +3,7 @@
 
 .zv-table__operate {
   @include flex($justifyContent: space-around);
+  /deep/ .el-link {
+    font-size: $sub-font-size;
+  }
 }

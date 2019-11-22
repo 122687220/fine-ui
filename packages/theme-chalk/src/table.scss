@@ -92,6 +92,13 @@
   .zv-table_button {
     margin-left: 8px;
   }
+
+  .el-table__body tr.hover-row>td,
+  .el-table__body tr.hover-row.current-row>td,
+  .el-table__body tr.hover-row.el-table__row--striped>td,
+  .el-table__body tr.hover-row.el-table__row--striped.current-row>td {
+    background-color: #fafafa;
+  }
 }
 
 .zv-table_header-class th {

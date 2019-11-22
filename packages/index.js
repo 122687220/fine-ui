@@ -33,8 +33,9 @@ import TableOperate from './table-operate'
 import Tabs from './tabs'
 import Tag from './tag'
 import Title from './title'
+import Tooltip from './tooltip'
 import Upload from './upload'
-const version = '0.3.9'
+const version = '0.4.0'
 const components = [
   Alert,
   Button,
@@ -69,6 +70,7 @@ const components = [
   Tabs,
   Tag,
   Title,
+  Tooltip,
   Upload
 ]
 const install = Vue => {
@@ -116,6 +118,7 @@ export {
   Tabs,
   Tag,
   Title,
+  Tooltip,
   Upload
 }
 export default {

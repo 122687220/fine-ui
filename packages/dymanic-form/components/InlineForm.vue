@@ -9,6 +9,8 @@
         style="margin-right: 8px;"
         v-bind="item"
         :widthType="item.widthType || 'default'"
+        @change="handleChange(item)"
+        @clickIcon="iconfunction(item)"
       />
     </template>
     <slot />
@@ -22,6 +24,7 @@ import ZvForm from '../../form/index'
 import ZvSelect from '../../select/index'
 import ZvSelectTime from '../../select-time/index'
 import ZvInput from '../../input/index'
+import { dispatch } from '../../mixins/emitter'
 
 export default create({
   name: 'InlineForm',
@@ -51,6 +54,13 @@ export default create({
     this.initValue()
   },
   methods: {
+    dispatch,
+    handleChange(item) {
+      this.dispatch('ZvDymanicForm', 'change', item)
+    },
+    iconfunction(item) {
+      this.dispatch('ZvDymanicForm', 'clickIcon', item)
+    },
     initValue() {
       for (const key in this.schema) {
         // 循环将所有的值都设置为可响应的  后续可设置为嵌套递归的方式

@@ -59,6 +59,12 @@
           "path": "/rowcol"
         },
         {
+          "desc": "文字提示",
+          "name": "tooltip",
+          "isMobile": "1",
+          "path": "/tooltip"
+        },
+        {
           "desc": "按钮",
           "name": "button",
           "isMobile": "1",
