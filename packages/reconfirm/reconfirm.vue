@@ -100,7 +100,7 @@ export default {
         closeOnClickModal={false}
         width={width}
         onClosed={closed}
-        {...{ attrs: $attrs, listeners: $listeners }}
+        {...{ attrs: $attrs, on: $listeners }}
       >
         <ElScrollbar style={bodyStyle} class="el-dialog__body__default">
           <div>{this.contentRender ? this.contentRender() : content}</div>

@@ -1,6 +1,6 @@
 {
   "name": "@zvalley/zv-ui__pc",
-  "version": "0.4.0",
+  "version": "0.4.1",
   "description": "中科云谷产品部电脑端端组件库",
   "main": "lib/zv-ui__pc.common.js",
   "style": "lib/theme-chalk/index.css",
@@ -46,7 +46,7 @@
     "cp-cli": "^2.0.0",
     "cssnano": "^4.1.10",
     "cz-conventional-changelog": "^2.1.0",
-    "element-ui": "^2.10.0",
+    "element-ui": "^2.13.0",
     "eslint": "^5.16.0",
     "eslint-plugin-vue": "^5.0.0",
     "fs-extra": "^8.0.1",

@@ -95,6 +95,12 @@
           "path": "/display"
         },
         {
+          "desc": "图片纯展示",
+          "name": "image",
+          "isMobile": "1",
+          "path": "/image"
+        },
+        {
           "desc": "分页器",
           "name": "pagination",
           "isMobile": "1",

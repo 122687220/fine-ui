@@ -13,6 +13,7 @@ import Dropdown from './dropdown'
 import DymanicForm from './dymanic-form'
 import Form from './form'
 import FormItem from './form-item'
+import Image from './image'
 import Input from './input'
 import Link from './link'
 import LocaleProvider from './locale-provider'
@@ -35,7 +36,7 @@ import Tag from './tag'
 import Title from './title'
 import Tooltip from './tooltip'
 import Upload from './upload'
-const version = '0.4.0'
+const version = '0.4.1'
 const components = [
   Alert,
   Button,
@@ -50,6 +51,7 @@ const components = [
   DymanicForm,
   Form,
   FormItem,
+  Image,
   Input,
   Link,
   LocaleProvider,
@@ -98,6 +100,7 @@ export {
   DymanicForm,
   Form,
   FormItem,
+  Image,
   Input,
   Link,
   LocaleProvider,

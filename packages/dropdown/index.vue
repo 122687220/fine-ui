@@ -49,7 +49,7 @@ export default create({
       <ElDropdown
         class="zv-dropdown"
         onCommand={commandHandler}
-        {...{ attrs: $attrs, listeners: $listeners }}
+        {...{ attrs: $attrs, on: $listeners }}
       >
         {$slotsDefault}
         {dropDownItem}

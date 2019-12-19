@@ -36,7 +36,7 @@ export default create({
     const attrs = Object.assign({}, $attrs, { schema })
     // 最终的渲染函数
     return (
-      <BlockForm vModel={currentValue} {...{ attrs, listeners: $listeners }}>
+      <BlockForm vModel={currentValue} {...{ attrs, on: $listeners }}>
         {$slots.default}
       </BlockForm>
     )
