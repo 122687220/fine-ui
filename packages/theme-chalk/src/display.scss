@@ -2,6 +2,12 @@
 @import './common/mixin.scss';
 
 .zv-display {
+  padding: 8px 0;
+
+  &.default {
+    width: $input-width;
+  }
+
   &__title {
     height: 36px;
     line-height: 36px;

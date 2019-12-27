@@ -95,6 +95,12 @@
           "path": "/display"
         },
         {
+          "desc": "表单纯展示集合",
+          "name": "displayunion",
+          "isMobile": "1",
+          "path": "/displayunion"
+        },
+        {
           "desc": "图片纯展示",
           "name": "image",
           "isMobile": "1",

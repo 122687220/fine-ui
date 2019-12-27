@@ -9,6 +9,7 @@ import Dialog from './dialog'
 import DialogFullscreen from './dialog-fullscreen'
 import DialogMiddle from './dialog-middle'
 import Display from './display'
+import DisplayUnion from './display-union'
 import Dropdown from './dropdown'
 import DymanicForm from './dymanic-form'
 import Form from './form'
@@ -36,7 +37,7 @@ import Tag from './tag'
 import Title from './title'
 import Tooltip from './tooltip'
 import Upload from './upload'
-const version = '0.4.1'
+const version = '0.4.2'
 const components = [
   Alert,
   Button,
@@ -47,6 +48,7 @@ const components = [
   DialogFullscreen,
   DialogMiddle,
   Display,
+  DisplayUnion,
   Dropdown,
   DymanicForm,
   Form,
@@ -96,6 +98,7 @@ export {
   DialogFullscreen,
   DialogMiddle,
   Display,
+  DisplayUnion,
   Dropdown,
   DymanicForm,
   Form,

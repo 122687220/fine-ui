@@ -1,6 +1,8 @@
 <template>
   <div>
     <zv-display title="ddd :" content="dfsefsegege" />
+
+    <zv-display title="ddd :" content="dfsefsegege" type="default" />
   </div>
 </template>
 
