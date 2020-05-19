@@ -18,7 +18,7 @@
   1. nrm add xxx http://registry.lhanyun.com/  (添加npm源，xxx自己命名).
   2. nrm use xxx (切换npm源)
 )
-npm install @zvalley/zv-ui__pc --save
+npm install @zvalley/fine-ui --save
 ```
 
 <!-- {.md} -->
@@ -64,7 +64,7 @@ Vue.use(ElementUI, {
 <!-- {.md} -->
 
 ```js
-import ZvUI from 'zv-ui__pc' // 引入组件库
+import FineUi from 'fine-ui' // 引入组件库
 ```
 
 <!-- {.md} -->
@@ -72,13 +72,13 @@ import ZvUI from 'zv-ui__pc' // 引入组件库
 引入<!-- {.md} -->样式
 
 ```js
-import 'zv-ui__pc/lib/theme-chalk/index.css' 
+import 'fine-ui/lib/theme-chalk/index.css' 
 ```
 
 最后，全局使用组件库<!-- {.md} -->
 
 ```js
-Vue.use(ZvUI)
+Vue.use(FineUi)
 ```
 
 <!-- {.md} -->
@@ -92,7 +92,7 @@ Vue.use(ZvUI)
 <!-- {.md} -->
 
 ```js
-import { ZvButton } from 'ZvUI'
+import { ZvButton } from 'FineUi'
 
 Vue.use(ZvButton)
 ```
@@ -106,14 +106,14 @@ module.exports = {
     [
       'import',
       {
-        libraryName: '@zvalley/zv-ui__pc',
+        libraryName: '@zvalley/fine-ui',
         libraryDirectory: 'packages',
         style: name => {
           const newName = name.replace('packages', 'packages/theme-chalk/lib')
           return `${newName}.css`
         }
       },
-      'zv-ui__pc'
+      'fine-ui'
     ]
   ]
 }
