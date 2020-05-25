@@ -22,6 +22,7 @@
           v-bind="item"
           @clickIcon="iconfunction(item)"
           @change="handleChange(item)"
+          v-on="item.methods"
         />
         <zv-select-label
           v-model="currentValue[index]"
@@ -33,6 +34,7 @@
           :component-name="item.componentType || 'Select'"
           v-bind="item"
           @change="handleChange(item)"
+          v-on="item.methods"
         />
         <div v-bind="item" v-if="item.componentName === 'ZvEmptyBlock'"></div>
       </zv-form-item>

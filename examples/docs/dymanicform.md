@@ -328,5 +328,6 @@ export default {
 | `componentName`      | `渲染的组件名称(ZvSelectLabel下componentType字段必填)  ZvEmptyBlock(表示占据一个空的内容)`                                 | `string` | -      | -         |
 | `componentType`      | `ZvSelectLabel下生效`                                 | `string` | -      | -         |
 | `rules`      | `想要自己添加的表单校验规则`                                 | `Array` | -      | -         |
+| `methods`      | `原来的组件自带的methods方法`                                 | `Object` | -      | -         |
 | `validator`      | `内置的表单校验规则(身份证校验,邮箱校验,数字校验,手机和座机校验,是否必填项校验,链接地址校验,数字输入范围校验, 字符串长短校验)`                                 | `Array` | -      | -         |
 | `其他组件对应支持的属性都可写入`      |  -         |

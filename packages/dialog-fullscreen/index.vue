@@ -43,10 +43,7 @@ export default create({
         'background-color': this.backgroundColor,
         color: this.textColor
       }
-      if (
-        this.backgroundColor === '#fff' ||
-        this.backgroundColor === '#ffffff'
-      ) {
+      if (this.backgroundColor === '#fff' || this.backgroundColor === '#ffffff') {
         style['border-bottom'] = '1px solid #eeeeee'
         style.color = '#212121'
       }

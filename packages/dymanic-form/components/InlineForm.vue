@@ -11,6 +11,7 @@
         :widthType="item.widthType || 'default'"
         @change="handleChange(item)"
         @clickIcon="iconfunction(item)"
+        v-on="item.methods"
       />
     </template>
     <slot />

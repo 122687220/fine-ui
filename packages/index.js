@@ -37,7 +37,7 @@ import Tag from './tag'
 import Title from './title'
 import Tooltip from './tooltip'
 import Upload from './upload'
-const version = '0.4.2'
+const version = '0.4.3'
 const components = [
   Alert,
   Button,

@@ -72,7 +72,15 @@ export default {
         fruit: {
           componentName: 'ZvSelect',
           options,
-          placeholder: '请选择其他'
+          placeholder: '请选择其他',
+          methods: {
+            change(value) {
+              console.log('选择', value)
+            },
+            'visible-change'(value) {
+              console.log('是否隐藏了', value)
+            }
+          }
         },
         time: {
           componentName: 'ZvSelectTime',

@@ -7,6 +7,10 @@
   .zv-input__content {
     flex-basis: auto !important;
     -ms-flex-preferred-size: auto;
+
+    .el-input {
+      width: 100%;
+    }
   }
 
   @include flex();
