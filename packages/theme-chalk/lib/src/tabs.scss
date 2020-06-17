@@ -1,0 +1,27 @@
+@import './common/variables.scss';
+@import './common/mixin.scss';
+
+.zv-tabs {
+  width: 100%;
+  .el-tabs__header {
+    margin-bottom: 0px;
+  }
+  .el-tabs__item {
+    @include containerH44($color: $sub-font-color, $showWidth: false);
+  }
+  .el-tabs__item.is-active {
+    color: $base-font-color;
+  }
+  .el-tabs__nav-wrap::after {
+    background-color: $background-color;
+  }
+  .el-tabs__active-bar {
+    background-color: $base-color;
+  }
+  .el-tabs__new-tab:hover {
+    color: $base-color;
+  }
+  .el-tabs__nav-scroll {
+    padding: 0 16px;
+  }
+}

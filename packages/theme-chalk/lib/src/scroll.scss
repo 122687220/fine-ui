@@ -1,0 +1,11 @@
+.zv-scrollbar {
+  .el-scrollbar__wrap {
+    overflow-x: hidden !important;
+  }
+}
+
+.zv-scrollbar {
+  /deep/ .el-scrollbar__wrap {
+    overflow-x: hidden !important;
+  }
+}

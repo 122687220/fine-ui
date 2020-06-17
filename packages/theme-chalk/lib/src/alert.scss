@@ -1,0 +1,18 @@
+@import './common/variables.scss';
+@import './common/mixin.scss';
+
+.zv-alert {
+  @include containerH44();
+  @include flex();
+  font-size: $sub-font-size;
+  padding: 0 16px;
+
+  &__svg {
+    color: $base-color;
+    margin-right: 4px;
+  }
+}
+
+.zv-alert__inline {
+  background-color: $mainBg;
+}

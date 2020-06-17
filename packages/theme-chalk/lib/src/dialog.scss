@@ -1,0 +1,77 @@
+@import './common/variables.scss';
+@import './common/mixin.scss';
+
+@mixin inputBottomBorder($border-color: $border-color) {
+  border-bottom: 1px solid $border-color;
+}
+
+@mixin padding16() {
+  padding: 0 16px;
+}
+
+.zv-dialog {
+  min-width: 100px;
+
+  .el-dialog__header {
+    @include containerH44();
+    @include inputBottomBorder();
+    @include padding16();
+    width: auto;
+    .el-dialog__title {
+      font-size: $base-font-size;
+    }
+
+    .el-dialog__headerbtn {
+      @include center();
+      top: 6px;
+      right: 16px;
+      width: 32px;
+      height: 32px;
+      border: 1px solid $border-color;
+      border-radius: 4px;
+
+      &:hover {
+        .el-dialog__close {
+          color: $base-font-color;
+        }
+      }
+    }
+  }
+
+  .el-dialog__body {
+    padding: 0;
+    @include inputBottomBorder();
+    overflow-x: hidden;
+  }
+
+  .el-dialog__body__default {
+    padding-top: 8px;
+    padding-left: 16px;
+    padding-right: 16px;
+    line-height: 1.5;
+  }
+
+  .el-dialog__footer {
+    padding: 0;
+
+    .dialog-footer {
+      @include containerH44();
+      @include padding16();
+      display: flex;
+      justify-content: flex-end;
+      width: auto;
+      .zv-button {
+        line-height: inherit;
+      }
+    }
+  }
+
+  &__footerbtn {
+    margin-right: 8px;
+
+    button {
+      border-color: $base-color !important;
+      color: $base-color !important;
+    }
+  }
+}

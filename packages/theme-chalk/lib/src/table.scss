@@ -1,0 +1,110 @@
+@import './common/variables.scss';
+@import './common/mixin.scss';
+
+.zv-table {
+  position: relative;
+
+  .el-table {
+    color: $base-font-color;
+  }
+
+  /deep/ .el-table-column--selection .cell {
+    width: 60px;
+    padding-left: 20px;
+    padding-right: 20px;
+    display: inline-block;
+  }
+
+  /deep/ .el-checkbox .el-checkbox__input {
+    height: 14px;
+  }
+
+  .zv-table_container {
+    width: 100%;
+  }
+
+  .zv-table_container-hidden {
+    .zv-table_header-class {
+      .el-checkbox__input {
+        display: none;
+      }
+    }
+  }
+
+  th {
+    padding: 0;
+    height: 44px;
+  }
+
+  .has-gutter {
+    th {
+      background-color: $mainBg;
+    }
+  }
+
+  .hasOperation {
+    color: #4272d7;
+    text-decoration: underline;
+    cursor: pointer;
+  }
+
+  .el-checkbox__input.is-checked,
+  .el-checkbox__input.is-checked .el-checkbox__inner,
+  .el-checkbox__input.is-indeterminate .el-checkbox__inner {
+    background-color: $base-color;
+    border-color: $base-color;
+    height: 14px;
+  }
+
+  .el-checkbox__inner:hover {
+    border-color: $base-color;
+  }
+
+  .rowDisabled {
+    color: #c7c7c7;
+  }
+
+  .el-table--medium td {
+    padding: 6px 0;
+    height: 44px;
+  }
+
+  div.cell {
+    max-width: 400px;
+  }
+
+  .zv-table_button-box {
+    display: flex;
+    flex-direction: row-reverse;
+  }
+
+  //表格宽度自适应
+  .el-table__body {
+    table-layout: auto !important;
+  }
+
+  .zv-table_cell-content {
+    overflow: hidden;
+    text-overflow: ellipsis;
+    white-space: nowrap;
+  }
+
+  .zv-table_button {
+    margin-left: 8px;
+  }
+
+  .el-table__body tr.hover-row>td,
+  .el-table__body tr.hover-row.current-row>td,
+  .el-table__body tr.hover-row.el-table__row--striped>td,
+  .el-table__body tr.hover-row.el-table__row--striped.current-row>td {
+    background-color: #fafafa;
+  }
+}
+
+.zv-table_header-class th {
+  background-color: $mainBg !important;
+}
+
+.zv-table_header-class th.is-sortable {
+  padding: 0;
+}

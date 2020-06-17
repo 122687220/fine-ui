@@ -1,0 +1,25 @@
+@import './common/variables.scss';
+@import './common/mixin.scss';
+
+.zv-dialog__fullscreen {
+  position: fixed;
+  background-color: $mainBg;
+  height: 100vh;
+  width: 100vw;
+  z-index: 999;
+  top: 0;
+  left: 0;
+
+  &-container {
+    height: calc(100vh - 44px);
+  }
+
+  &-nav {
+    @include flex();
+    box-sizing: border-box;
+    height: 44px;
+    width: 100%;
+    padding: 0 16px;
+    font-size: $base-font-size;
+  }
+}

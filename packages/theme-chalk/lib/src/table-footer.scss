@@ -1,0 +1,27 @@
+@import './common/variables.scss';
+@import './common/mixin.scss';
+
+.zv-table__footer {
+  @include containerH44();
+  @include flex();
+
+  &-left {
+    @include flex($justifyContent: flex-start);
+  }
+
+  &-show {
+    margin-left: 30px;
+    margin-right: 12px;
+    font-size: $sub-font-size;
+    color: $sub-font-color;
+  }
+
+  &-operate {
+    height: 32px;
+    line-height: 32px;
+    color: $base-font-color;
+    border-left: 1px solid $border-color;
+    font-size: $sub-font-size;
+    padding-left: 18px;
+  }
+}

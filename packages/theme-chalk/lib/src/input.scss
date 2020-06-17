@@ -1,0 +1,162 @@
+@import './common/variables.scss';
+@import './common/mixin.scss';
+
+.zv-input {
+  min-width: $input-width;
+
+  .zv-input__content {
+    flex-basis: auto !important;
+    -ms-flex-preferred-size: auto;
+
+    .el-input {
+      width: 100%;
+    }
+  }
+
+  @include flex();
+  box-sizing: border-box;
+  border-bottom: 1px solid $border-color;
+  width: 100%;
+
+  .zv-input__label {
+    @include containerH44($showWidth: false);
+    margin-right: 16px;
+    white-space: nowrap;
+  }
+
+  .zv-input__content {
+    @include containerH44($showWidth: false);
+    margin-right: 16px;
+    flex: 1;
+  }
+
+  &--require {
+    .zv-input__label:before {
+      content: '*';
+      color: $warning-color;
+      margin-right: 2px;
+    }
+  }
+}
+
+.zv-input--label-top .zv-input__label,
+.zv-input--label-top .zv-input__content {
+  margin-right: 0;
+}
+
+.zv-input--label-top {
+  flex-direction: column;
+
+  .zv-input__label {
+    width: 100%;
+    border-bottom: 1px solid $border-color;
+  }
+
+  .zv-input__content {
+    width: 100%;
+  }
+}
+
+.zv-input {
+  .el-input__inner {
+    padding: 0;
+    border-width: 0;
+  }
+
+  .el-input--suffix .el-input__inner {
+    padding-right: 0;
+  }
+
+  .el-textarea__inner {
+    padding: 0;
+    border-width: 0;
+    border-bottom-width: 1px;
+    color: $sub-font-color;
+
+    &:focus {
+      border-color: $border-color;
+    }
+  }
+
+  .el-input--medium .el-input__inner {
+    height: 32px !important;
+    line-height: 32px;
+  }
+
+  .el-input--suffix {
+    width: 25px;
+  }
+}
+
+.zv-input--readonly {
+  .el-input__inner {
+    color: #999;
+  }
+  .dark {
+    .el-input__inner {
+      color: $base-font-color;
+    }
+  }
+}
+
+.zv-input--right {
+  .el-input__inner {
+    text-align: right;
+  }
+}
+
+.zv-input--border {
+  border-width: 0 !important;
+
+  .zv-input__label {
+    border-width: 0 !important;
+    height: 36px !important;
+  }
+
+  .el-input__inner {
+    border-width: 1px;
+    padding-left: 10px;
+  }
+
+  .el-textarea__inner {
+    border-width: 1px;
+    padding-left: 10px;
+  }
+}
+
+.zv-input--textarea {
+  border-width: 0 !important;
+
+  .zv-input__content {
+    padding-top: 16px;
+  }
+}
+
+.zv-input--textarea.zv-input--border {
+  .zv-input__content {
+    padding-top: 6px;
+  }
+}
+
+.zv-input--textarea.zv-input--border {
+  border-width: 0 !important;
+  height: 100%;
+
+  .zv-input__content {
+    height: 100%;
+
+    .el-textarea__inner {
+      padding-top: 8px;
+      min-height: 52px !important;
+    }
+  }
+}
+.zv-input.default {
+  box-sizing: border-box;
+  width: $input-width;
+}
+
+.zv-input.super {
+  box-sizing: border-box;
+  width: 100%;
+}

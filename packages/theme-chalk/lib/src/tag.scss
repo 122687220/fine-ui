@@ -1,0 +1,31 @@
+@import './common/variables.scss';
+
+.zv-tag {
+  height: 24px;
+  line-height: 24px;
+}
+
+.zv-tag.el-tag--dark {
+  background-color: $primary-color;
+  border-color: $primary-color;
+}
+
+.zv-tag.el-tag--dark.el-tag--success {
+  background-color: $base-color;
+  border-color: $base-color;
+}
+
+.zv-tag.el-tag--dark.el-tag--warning {
+  background-color: $over-color;
+  border-color: $over-color;
+}
+
+.zv-tag.el-tag--dark.el-tag--danger {
+  background-color: $warning-color;
+  border-color: $warning-color;
+}
+
+.zv-tag.el-tag--dark.el-tag--info {
+  background-color: $sub-font-color;
+  border-color: $sub-font-color;
+}

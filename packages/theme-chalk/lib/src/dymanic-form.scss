@@ -1,0 +1,34 @@
+@import './common/variables.scss';
+
+.zv-dymanic__form {
+  .zv-dymanic-form__item {
+    min-width: $dymanic-form-item;
+    order: 1;
+    .el-form-item {
+      min-width: $input-width;
+      display: inline-block;
+    }
+  }
+
+  .zv-form__block {
+    width: 100%;
+    order: 2;
+  }
+}
+
+.zv-dymanic-dialog__form {
+  .zv-dymanic-form__item {
+    min-width: $dialog-dymanic-form-item;
+    order: 1;
+
+    .el-form-item {
+      min-width: $input-width;
+      display: inline-block;
+    }
+  }
+
+  .zv-form__block {
+    width: 100%;
+    order: 2;
+  }
+}

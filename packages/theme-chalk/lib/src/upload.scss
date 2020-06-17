@@ -1,0 +1,118 @@
+@import './common/variables.scss';
+@import './common/mixin.scss';
+
+.zv-upload {
+  /deep/ img {
+    object-fit: contain;
+    background: #f5f5f5;
+  }
+  .el-upload--picture-card {
+    width: 100px;
+    height: 100px;
+    line-height: 100px;
+    border-radius: 4px;
+    border: dashed 1px #e0e0e0;
+    i {
+      position: relative;
+      top: 5px;
+    }
+  }
+
+  .el-upload-list--picture-card {
+    .el-upload-list__item {
+      border: 0;
+      height: 128px;
+      width: 100px;
+      margin-right: 24px;
+    }
+
+    .el-upload-list__item-actions {
+      height: 100px;
+    }
+    
+    /deep/ .el-progress {
+      width: 100% !important;
+      height: 100% !important;
+    }
+
+    /deep/ .el-progress-circle {
+      width: 100% !important;
+      height: 100% !important;
+    }
+  }  
+}
+
+
+.zv-upload {
+  .el-upload-list--picture-card .el-upload-list__item-thumbnail {
+    height: 100px;
+    border-radius: 4px;
+  }
+
+  .el-upload-list--picture-card .el-upload-list__item-name {
+    line-height: 1.2;
+    display: block;
+    margin-right: 0;
+    margin-top: 4px;
+    .el-icon-document {
+      display: none;
+    }
+  }
+
+  .zv-upload__upload {
+    .zv-upload__upload-name {
+      margin-top: 12px;
+      line-height: 1;
+      position: relative;
+      text-align: center;
+      font-size: 14px;
+      vertical-align: bottom;
+    }
+  }
+
+  &-title {
+    @include containerH44();
+    font-size: 14px;
+    padding-left: 8px;
+    color: #212121;
+
+    span {
+      font-size: 12px;
+      color: #8b8b8b;
+    }
+  }
+
+  .zv-upload__tip {
+    width: 100px;
+    text-align: center;
+    font-size: 14px;
+    color: #8b8b8b;
+    margin-top: 10px;
+  }
+
+  &-list {
+    height: 100%;
+    width: 100%;
+
+    &__item-thumbnail {
+      height: 100px !important;
+    }
+  }
+
+  .zv-upload-name {
+    font-size: 14px;
+    color: #8b8b8b;
+    width: 100px;
+    text-align: center;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    white-space: nowrap;
+  }
+
+  .green {
+    color: #8b8b8b;
+    margin-bottom: 20px;
+    font-style: normal;
+    cursor: pointer;
+  }
+}

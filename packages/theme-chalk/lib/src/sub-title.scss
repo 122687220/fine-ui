@@ -1,0 +1,12 @@
+@import './common/variables.scss';
+@import './common/mixin.scss';
+
+.zv-sub-title {
+  @include containerH44();
+  &__main {
+    border-left: 4px solid $base-color;
+    padding-left: 12px;
+    display: block;
+    line-height: 1;
+  }
+}
