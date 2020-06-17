@@ -1,6 +1,6 @@
 {
   "name": "@zvalley/fine-ui",
-  "version": "0.4.3",
+  "version": "0.4.4",
   "description": "中科云谷产品部电脑端端组件库",
   "main": "lib/fine-ui.common.js",
   "style": "lib/theme-chalk/index.css",
