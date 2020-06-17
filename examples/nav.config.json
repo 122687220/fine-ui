@@ -39,9 +39,7 @@
       "isMobile": "1",
       "path": "/index",
       "type": "pages"
-    }
-  ],
-  "组件": [
+    },
     {
       "desc": "基础组件",
       "isMobile": "1",
@@ -247,12 +245,6 @@
       ]
     },
     {
-      "desc": "反馈组件",
-      "isMobile": "1",
-      "items": [
-      ]
-    },
-    {
       "desc": "展示组件",
       "isMobile": "1",
       "items": [
@@ -268,12 +260,6 @@
           "isMobile": "1",
           "path": "/subtitle"
         }
-      ]
-    },
-    {
-      "desc": "导航组件",
-      "isMobile": "1",
-      "items": [
       ]
     }
   ]

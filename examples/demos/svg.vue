@@ -28,7 +28,6 @@ export default {
 
 <style lang="scss" scoped>
 .svg-page__wrapper {
-  width: 1000px;
   display: grid;
   grid-template-columns: repeat(8, 1fr);
   grid-column-gap: 20px;

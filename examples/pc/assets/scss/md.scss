@@ -1,15 +1,42 @@
-$--active-color:#2150db;
-$--title-color:#515561;
-$--meta-title-color:#515561;
-$--content-color:#5e6d82;
+$--active-color:#4fc08d;
+$--title-color:#333333;
+$--meta-title-color:#333333;
+$--content-color:#34495e;
 
-section.view {
+
+div.view {
+  background-color: #f7f8fa;
   font-size: 14px;
+  padding-bottom: 32px;
+
+  li {
+    list-style-type: none;
+  }
+
+  a {
+    text-decoration: none!important;
+  }
+
+  a:hover {
+    color: #4fc08d;
+  }
+
+  img {
+    max-width: 100%;
+  }
+
+  section {
+    background: #fff;
+    border-radius: 12px;
+    padding: 12px 24px;
+    box-shadow: 0 8px 12px #ebedf0;
+  }
+
   a.md {
     text-decoration: underline;
   }
   .md {
-    color: #515561;
+    color: #333333;
   }
   .demo-block {
     padding: 32px;
@@ -25,24 +52,24 @@ section.view {
     }
   }
   hr.md {
-    margin: 1.2em 0;
+    margin: 0.8em 0;
     border: 0;
-    border-bottom: 1px solid #C5D9E8;
     &+ul {
       margin: 16px 0;
       padding-left: 24px;
       list-style: disc;
       color: #3f536e;
       li {
-        line-height: 1.8;
+        line-height: 1.5;
       }
     }
   }
   p.md {
     padding: 0;
-    line-height: 1.7;
+    line-height: 1.5;
     color: #3f536e;
     font-size: 14px;
+    padding: 8px 0;
   }
   h1.md {
     font-size: 24px;
@@ -52,7 +79,7 @@ section.view {
   h3.md,
   h4.md,
   h5.md {
-    margin: 16px 0;
+    margin: 8px 0;
     line-height: 1.5;
     &+ul {
       margin: 16px 0;
@@ -113,7 +140,7 @@ section.view {
     display: block;
     width: 100%;
     background-color: #fff;
-    color: #5e6d82;
+    color: #34495e;
     font-size: 14px;
     border-collapse: collapse;
     overflow: auto;

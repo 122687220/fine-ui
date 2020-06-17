@@ -2,18 +2,20 @@
   <div id="app">
     <mainHeader></mainHeader>
     <div class="container">
-      <sideNav class="nav"></sideNav>
+      <zv-scroll class="nav">
+        <sideNav />
+      </zv-scroll>
       <zv-locale-provider :locale="locale">
-        <router-view class="view"></router-view>
+        <zv-scroll class="view">
+          <router-view />
+        </zv-scroll>
       </zv-locale-provider>
     </div>
-    <mainFooter></mainFooter>
   </div>
 </template>
 
 <script>
 import mainHeader from './components/header.vue'
-import mainFooter from './components/footer.vue'
 import sideNav from './components/side-nav.vue'
 import router from './router'
 
@@ -40,8 +42,7 @@ export default {
   },
   components: {
     mainHeader,
-    sideNav,
-    mainFooter
+    sideNav
   }
 }
 </script>
@@ -50,18 +51,17 @@ export default {
 @import './assets/scss/index';
 
 .container {
-  margin: 48px auto;
-  width: 90%;
-  background-color: #fff;
+  background-color: #f7f8fa;
   box-shadow: 0 4px 30px 0 rgba(223, 225, 230, 0.5);
+  display: flex;
   .nav {
-    float: left;
-    width: 210px;
+    width: 214px;
+    height: calc(100vh - 60px);
   }
   .view {
-    float: left;
-    width: calc(100% - 540px);
-    padding: 32px 48px 48px;
+    flex: 1;
+    margin: 24px;
+    height: calc(100vh - 84px);
     box-sizing: border-box;
   }
 }
@@ -78,12 +78,12 @@ export default {
   z-index: 999;
   display: flex;
   align-items: center;
-  color: #628cf5;
+  color: #4fc08d;
   background-color: #fff;
   height: 40px;
   line-height: 40px;
   padding: 0 20px;
-  border: 1px solid #628cf5;
+  border: 1px solid #4fc08d;
   cursor: pointer;
   transition: all 0.5s ease;
   &:hover {

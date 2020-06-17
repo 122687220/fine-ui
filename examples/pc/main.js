@@ -7,10 +7,10 @@ import './plugins/element-variables.scss'
 import './plugins'
 import './assets/scss/index.scss'
 import demoBlock from './components/demo-block.vue'
-import ZvUI from '../../packages/index'
+import FineUI from '../../packages/index'
 import './icons'
 
-Vue.use(ZvUI)
+Vue.use(FineUI)
 import '../../packages/theme-chalk/lib/index.css'
 
 // Vue.use(VueCards)

@@ -144,10 +144,11 @@
   "author": "zoomlion",
   "repository": {
     "type": "git",
-    "url": "https://git.dev.tencent.com/xiaojing123/ZvUI-pc.git"
+    "url": "https://github.com/122687220/fine-ui/tree/master"
   },
   "keywords": [
     "vue",
-    "component"
+    "component",
+    "fine-ui"
   ]
 }

@@ -17,11 +17,9 @@ let addComponent = router => {
       routes = routes.concat(route.items)
     } else {
       if (route.name === 'site-index') {
-        route.component = r =>
-          require.ensure([], () => r(require(`../../docs/introduce.md`)))
+        route.component = r => require.ensure([], () => r(require(`../../docs/introduce.md`)))
       } else {
-        route.component = r =>
-          require.ensure([], () => r(require(`../../docs/${route.name}.md`)))
+        route.component = r => require.ensure([], () => r(require(`../../docs/${route.name}.md`)))
       }
     }
   })

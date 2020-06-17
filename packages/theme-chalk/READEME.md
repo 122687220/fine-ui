@@ -1,3 +1,3 @@
 # Theme default
 
-this is theme default of ZvUI-pc
+this is theme default of fine-ui

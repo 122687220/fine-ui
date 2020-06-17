@@ -16,11 +16,6 @@
 
 - 基于电脑端 UI 规范和 element-ui 组件，定制的一套 UI 组件库
 
-## 项目地址
-
-<!-- {.md} -->
-
-https://git.dev.tencent.com/xiaojing123/ZvUI-pc.git
 
 <!-- {.md} -->
 
