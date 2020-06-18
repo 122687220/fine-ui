@@ -9,8 +9,18 @@ div.view {
   font-size: 14px;
   padding-bottom: 32px;
 
+  ul {
+    margin-left: 16px;
+  }
+
   li {
-    list-style-type: none;
+    line-height: 1.5;
+    margin: 8px 0;
+  }
+
+  em {
+    margin: 8px 0;
+    display: inline-block;
   }
 
   a {

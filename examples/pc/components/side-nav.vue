@@ -56,6 +56,10 @@ export default {
     font-size: 14px;
     font-weight: normal;
     line-height: 1.8;
+    &:hover > a {
+      color: #4fc08d;
+    }
+
     a {
       display: block;
       position: relative;
@@ -79,6 +83,10 @@ export default {
       padding: 10px 0 10px 24px;
       color: #616367;
       font-size: 14px;
+
+      &:hover {
+        color: #4fc08d;
+      }
     }
     .active {
       color: #4fc08d;
